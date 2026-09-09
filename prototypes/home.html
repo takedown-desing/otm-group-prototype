@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Прототип: Главная. Торговое оборудование в Иркутске от производителя, ОТМ Групп</title>
+<meta name="description" content="Прототип главной страницы otm-group.ru. Витрины, прилавки, островки для ТЦ, стеллажи и ресепшн под размеры помещения. 3D-проект за 24 часа, собственное производство, монтаж под ключ.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%277%27 fill=%27%23E2573B%27/%3E%3Ctext x=%2716%27 y=%2722%27 font-size=%2716%27 font-family=%27Arial%27 font-weight=%27700%27 fill=%27white%27 text-anchor=%27middle%27%3EO%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+
+<!-- Панель прототипа -->
+<div class="proto-bar">
+  <span class="pb-title">Прототип ОТМ Групп</span>
+  <nav>
+    <a href="../index.html">Обзор</a>
+    <a href="home.html">Главная</a>
+    <a href="catalog.html">Каталог</a>
+    <a href="product.html">Карточка товара</a>
+  </nav>
+  <div class="pb-legend">
+    <span><i style="background:#6B7280"></i>Существующий блок</span>
+    <span><i style="background:#2563EB"></i>Новый: по КП</span>
+    <span><i style="background:#15803D"></i>Новый: по исследованию</span>
+    <button class="pb-toggle" data-toggle-tags>Скрыть пометки</button>
+  </div>
+</div>
+
+<!-- Верхняя полоса -->
+<div class="topbar blk" data-tag="res" data-label="Новый блок: по результатам исследования">
+  <div class="container">
+    <span>Иркутск, <span class="fill-note">адрес производства: уточнить у клиента</span></span>
+    <span class="hide-m">Ежедневно 9:00 до 18:00</span>
+    <span class="grow"></span>
+    <a class="hide-m" href="mailto:otm-group@mail.ru">otm-group@mail.ru</a>
+    <span class="hide-m">Работаем с ИП и юрлицами, договор, НДС</span>
+  </div>
+</div>
+
+<!-- Шапка -->
+<header class="header blk" data-tag="mix" data-label="Существующий блок, переработан + новое по КП: поиск, мессенджеры, переключатель B2B / B2C">
+  <div class="container">
+    <a class="logo" href="home.html"><img src="../assets/img/logo.png" alt="ОТМ Групп"></a>
+    <div class="seg"><a class="active" href="home.html">Для бизнеса</a><a href="https://otm-group.ru/kukhni-na-zakaz/">Для дома</a></div>
+    <label class="search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input type="search" placeholder="Поиск по каталогу: витрина, прилавок, островок, ресепшн">
+    </label>
+    <div class="hdr-phone"><b>+7 (3952) 72-72-10</b><span>отдел продаж, ответим за 15 минут</span></div>
+    <div class="msgs">
+      <a class="msg wa" href="#" title="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 12 12 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg></a>
+      <a class="msg tg" href="#" title="Telegram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.6 18.7 19.5c-.2 1-.9 1.3-1.8.8l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.4-5 9.1-8.2c.4-.4-.1-.5-.6-.2L6.2 13.2 1.4 11.7c-1-.3-1-1 .2-1.5L20.5 3c.9-.3 1.6.2 1.4 1.6z"/></svg></a>
+      <a class="msg mx" href="#" title="MAX"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"><path d="M4 19V5l8 9 8-9v14"/></svg></a>
+    </div>
+    <a class="btn btn-primary" href="#" data-calc data-calc-title="Рассчитать проект" data-calc-sub="Приложите план помещения или список позиций, вернём смету и 3D-проект за 1 рабочий день">Рассчитать проект</a>
+    <button class="burger" data-open-menu aria-label="Меню"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  </div>
+</header>
+
+<!-- Меню коммерческих категорий -->
+<nav class="nav blk" data-tag="kp" data-label="Новый блок: по КП. Меню под коммерческие категории">
+  <div class="container">
+    <a class="cat-all" href="catalog.html">Каталог</a>
+    <a href="catalog.html" class="active">Витрины</a>
+    <a href="catalog.html">Прилавки и кассы</a>
+    <a href="catalog.html">Торговые острова</a>
+    <a href="catalog.html">Стеллажи и экономпанели</a>
+    <a href="catalog.html">Ресепшн и стойки</a>
+    <a href="catalog.html">Тумбы и подтоварники</a>
+    <a href="catalog.html">Шкафы для печатной продукции</a>
+    <a href="catalog.html">Для конфет и сыпучих</a>
+    <span class="sep"></span>
+    <a href="#niches">Решения по нишам</a>
+    <a href="#cases">Проекты</a>
+    <a href="#delivery">Доставка и монтаж</a>
+    <a href="#about">О компании</a>
+    <span class="sep"></span>
+    <a class="b2c" href="https://otm-group.ru/kukhni-na-zakaz/">Мебель для дома</a>
+  </div>
+</nav>
+
+<!-- Мобильное меню -->
+<div class="drawer">
+  <div class="panel">
+    <button class="close" data-close-menu aria-label="Закрыть">✕</button>
+    <div class="seg" style="display:inline-flex"><a class="active" href="home.html">Для бизнеса</a><a href="https://otm-group.ru/kukhni-na-zakaz/">Для дома</a></div>
+    <h4>Каталог</h4>
+    <a href="catalog.html">Витрины</a><a href="catalog.html">Прилавки и кассы</a><a href="catalog.html">Торговые острова</a><a href="catalog.html">Стеллажи и экономпанели</a><a href="catalog.html">Ресепшн и стойки</a><a href="catalog.html">Тумбы и подтоварники</a><a href="catalog.html">Шкафы для печатной продукции</a><a href="catalog.html">Для конфет и сыпучих</a>
+    <h4>Компания</h4>
+    <a href="#niches">Решения по нишам</a><a href="#cases">Проекты</a><a href="#delivery">Доставка и монтаж</a><a href="#about">О компании</a><a href="#contacts">Контакты</a>
+    <h4>Связь</h4>
+    <a href="tel:+73952727210">+7 (3952) 72-72-10</a><a href="#">WhatsApp</a><a href="#">Telegram</a><a href="#">MAX</a>
+  </div>
+</div>
+
+<!-- Первый экран -->
+<section class="hero blk" data-tag="mix" data-label="Существующий блок, переработан + новое по КП: позиционирование, 3 B2B-буллета, форма отправки плана">
+  <div class="container">
+    <div>
+      <span class="geo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>Производство в Иркутске, доставка по области и РФ</span>
+      <h1>Торговое оборудование и мебель для бизнеса в Иркутске от производителя</h1>
+      <p class="lead">Витрины, прилавки, островки для ТЦ, стеллажи и ресепшн под размеры вашего помещения. Проектируем, производим, доставляем и монтируем под ключ.</p>
+      <div class="bullets">
+        <div class="bullet"><b>3D-проект за 24 часа</b><span>Согласуете внешний вид с арендодателем до запуска производства</span></div>
+        <div class="bullet"><b>Собственное производство</b><span>ЛДСП, стекло, алюминиевый профиль, LED-подсветка. Работаем с 2013 года</span></div>
+        <div class="bullet"><b>Монтаж под ключ</b><span>Доставка по Иркутску и области, сборка на объекте, в том числе ночью в ТЦ</span></div>
+      </div>
+      <div class="cta-row">
+        <a class="btn btn-primary btn-lg" href="#" data-calc data-calc-title="Рассчитать по плану помещения" data-calc-sub="Приложите план, чертёж или фото. Вернём смету и 3D-проект за 1 рабочий день">Рассчитать по плану помещения</a>
+        <a class="btn btn-outline btn-lg" href="catalog.html" style="color:#fff;border-color:rgba(255,255,255,.4)">Каталог с ценами</a>
+        <span class="note">Или отправьте план в мессенджер, ответим в течение 15 минут</span>
+      </div>
+    </div>
+    <form class="hero-form">
+      <h3>Отправьте план помещения на расчёт</h3>
+      <div class="sub">Смета и 3D-проект за 1 рабочий день. Бесплатно, без обязательств</div>
+      <label class="field"><input type="text" placeholder="Ваше имя" required></label>
+      <label class="field"><input type="tel" placeholder="Телефон или мессенджер" required></label>
+      <label class="upload"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 16V4m0 0 4 4m-4-4-4 4"/><path d="M4 16v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3"/></svg><span><b>Прикрепить план, чертёж или фото</b>PDF, DWG, JPG, до 20 МБ. Можно от руки</span><input type="file" hidden></label>
+      <button class="btn btn-primary btn-block" type="submit" style="margin-top:12px">Получить расчёт</button>
+      <div class="reply-note"><i></i>Сейчас на связи: менеджер ответит в течение 15 минут</div>
+      <div class="consent">Нажимая кнопку, вы соглашаетесь с обработкой персональных данных</div>
+    </form>
+  </div>
+</section>
+
+<!-- Полоса доверия -->
+<div class="trust-strip blk" data-tag="res" data-label="Новый блок: по результатам исследования. Цифры вместо длинного текста (absolutsib, mr-66)">
+  <div class="container">
+    <div class="item"><b>с 2013</b><span>года производим торговое оборудование в Иркутске</span></div>
+    <div class="item"><b><span class="fill">N</span> проектов</b><span>магазинов, аптек и островков в ТЦ. Число заполняет клиент</span></div>
+    <div class="item"><b>от 7 дней</b><span>срок изготовления типовых моделей</span></div>
+    <div class="item"><b>Договор и НДС</b><span>работаем с ИП и юрлицами, закрывающие документы</span></div>
+    <div class="item"><b>Гарантия <span class="fill">24 мес.</span></b><span>на изделия и монтаж, срок уточнить у клиента</span></div>
+  </div>
+</div>
+
+<!-- Каталог на главной -->
+<section class="section blk" data-tag="kp" data-label="Новый блок: по КП. Каталог коммерческих категорий с ценой «от» (было 4 плитки без цен)" id="catalog">
+  <div class="container">
+    <div class="section-head">
+      <div><span class="eyebrow">Каталог</span><h2>Торговое оборудование с ценами «от»</h2><p>Категории названы так, как их ищут в Иркутске: витрины, прилавки, островки, стеллажи. Число моделей взято из текущего каталога сайта, цены «от» в прототипе условные.</p></div>
+      <a class="btn btn-outline" href="catalog.html">Весь каталог</a>
+    </div>
+    <div class="cat-grid">
+      <a class="cat-card" href="catalog.html"><div class="pic"><img src="../assets/img/vitrina-a-012.jpg" alt=""></div><h3>Витрины</h3><span class="muted small">Стеклянные, из ЛДСП, с подсветкой и накопителем</span><div class="meta"><span>101 модель</span><b>от 6 500 ₽</b></div></a>
+      <a class="cat-card" href="catalog.html"><div class="pic"><img src="../assets/img/prilavok-al-003.jpg" alt=""></div><h3>Прилавки и кассовые модули</h3><span class="muted small">Остеклённые, с местом под кассу, угловые</span><div class="meta"><span>24 модели</span><b>от 12 900 ₽</b></div></a>
+      <a class="cat-card" href="catalog.html"><div class="pic"><img src="../assets/img/ostrov-ko-001.jpg" alt=""></div><h3>Торговые острова и корнеры</h3><span class="muted small">Для ТЦ, по требованиям арендодателя</span><div class="meta"><span>21 модель</span><b>от 89 000 ₽</b></div></a>
+      <a class="cat-card" href="catalog.html"><div class="pic"><img src="../assets/img/stellazh-p-008.jpg" alt=""></div><h3>Стеллажи и экономпанели</h3><span class="muted small">Пристенные, островные, с навеской</span><div class="meta"><span>22 модели</span><b>от 4 900 ₽</b></div></a>
+      <a class="cat-card" href="catalog.html"><div class="pic"><img src="../assets/img/stoyka-r-001.jpg" alt=""></div><h3>Ресепшн и стойки администратора</h3><span class="muted small">Для офисов, салонов, клиник</span><div class="meta"><span>8 моделей</span><b>от 34 000 ₽</b></div></a>
+      <a class="cat-card" href="catalog.html"><div class="pic"><img src="../assets/img/tumba-of-010.jpg" alt=""></div><h3>Тумбы и подтоварники</h3><span class="muted small">Под витрины, с ящиками и дверцами</span><div class="meta"><span>14 моделей</span><b>от 5 900 ₽</b></div></a>
+      <a class="cat-card" href="catalog.html"><div class="pic"><img src="../assets/img/shkaf-of-001.jpg" alt=""></div><h3>Шкафы для печатной продукции</h3><span class="muted small">Открытые и с дверцами, для прессы и книг</span><div class="meta"><span>18 моделей</span><b>от 11 500 ₽</b></div></a>
+      <a class="cat-card" href="catalog.html"><div class="pic"><img src="../assets/img/vitrina-k-002.jpg" alt=""></div><h3>Для конфет и сыпучих</h3><span class="muted small">Витрины, прилавки и стеллажи с диспенсерами</span><div class="meta"><span>29 моделей</span><b>от 9 800 ₽</b></div></a>
+    </div>
+  </div>
+</section>
+
+<!-- Решения по нишам -->
+<section class="section blk" data-tag="res" data-label="Новый блок: по результатам исследования. Плитки по нишам (absolutsib, westcom, sp-oborudovanie)" id="niches">
+  <div class="container">
+    <div class="section-head">
+      <div><span class="eyebrow">Решения по нишам</span><h2>Оборудование под ваш формат торговли</h2><p>Закупщик ищет «оборудование для аптеки», а не «витрину серии Альфа». Каждая плитка ведёт на подборку изделий, комплектов и проектов по нише.</p></div>
+    </div>
+    <div class="niche-grid">
+      <a class="niche" href="catalog.html"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v18M3 12h18"/></svg></span><b>Аптеки</b><span>Витрины по требованиям СанПиН, кассовые модули, шкафы для запасов</span></a>
+      <a class="niche" href="catalog.html"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="7" width="18" height="12" rx="2"/><path d="M8 7V4h8v3"/></svg></span><b>Островки в ТЦ</b><span>Согласуем с арендодателем, монтаж ночью</span></a>
+      <a class="niche" href="catalog.html"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 4h12l2 5-4 2v9H8v-9L4 9z"/></svg></span><b>Одежда и обувь</b><span>Экономпанели, вешала, примерочные, кассы</span></a>
+      <a class="niche" href="catalog.html"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 8h16l-1.5 11h-13z"/><path d="M8 8a4 4 0 0 1 8 0"/></svg></span><b>Продукты и кондитерские</b><span>Витрины для конфет, стеллажи, прилавки с диспенсерами</span></a>
+      <a class="niche" href="catalog.html"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg></span><b>Салоны связи и оптика</b><span>Стеклянные витрины с подсветкой, стойки выдачи</span></a>
+      <a class="niche" href="catalog.html"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 20h18M5 20V9l7-5 7 5v11"/><path d="M10 20v-5h4v5"/></svg></span><b>Офисы и клиники</b><span>Ресепшн, стойки администратора, офисная мебель</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- Готовые комплекты -->
+<section class="section blk" data-tag="res" data-label="Новый блок: по результатам исследования. Готовые комплекты под нишу с ценой и сроком (westcom, ural-mart)">
+  <div class="container">
+    <div class="section-head">
+      <div><span class="eyebrow">Комплексный заказ</span><h2>Готовые комплекты с ценой и сроком</h2><p>Точка входа для тех, кто открывается с нуля. Состав и цены комплектов в прототипе условные, формат показывает, как поднять средний чек.</p></div>
+    </div>
+    <div class="kit-grid">
+      <div class="kit"><div class="pic"><img src="../assets/img/vitrina-a-012.jpg" alt=""><img src="../assets/img/prilavok-al-004.jpg" alt=""></div><div class="body"><span class="chip brand">Аптека до 20 м²</span><h3>Комплект «Аптека»</h3><ul><li>6 витрин из ЛДСП с подсветкой</li><li>Прилавок-касса с ящиком</li><li>Шкаф для запасов, стеллаж в подсобку</li><li>Проект по СанПиН, монтаж</li></ul><div class="row"><div class="price">от 189 000 ₽<small>срок 14 рабочих дней</small></div><a class="btn btn-sm btn-dark" href="#" data-calc data-calc-title="Комплект «Аптека»" data-calc-sub="Укажите площадь и приложите план, подберём состав комплекта">Рассчитать</a></div></div></div>
+      <div class="kit"><div class="pic"><img src="../assets/img/ostrov-ro-003.jpg" alt=""></div><div class="body"><span class="chip brand">Островок 6 м² в ТЦ</span><h3>Комплект «Островок»</h3><ul><li>Остров из ЛДСП и стекла по стандарту ТЦ</li><li>Накопители с замками, фриз с логотипом</li><li>LED-подсветка, розетки</li><li>Согласование с арендодателем, монтаж ночью</li></ul><div class="row"><div class="price">от 149 000 ₽<small>срок 12 рабочих дней</small></div><a class="btn btn-sm btn-dark" href="#" data-calc data-calc-title="Комплект «Островок»" data-calc-sub="Приложите техтребования ТЦ или план места, вернём 3D-проект">Рассчитать</a></div></div></div>
+      <div class="kit"><div class="pic"><img src="../assets/img/stellazh-p-008.jpg" alt=""><img src="../assets/img/prilavok-al-008.jpg" alt=""></div><div class="body"><span class="chip brand">Магазин одежды 40 м²</span><h3>Комплект «Одежда»</h3><ul><li>Экономпанели и навеска по периметру</li><li>Вешала островные, столы выкладки</li><li>Примерочная, кассовый модуль</li><li>Проект расстановки, монтаж</li></ul><div class="row"><div class="price">от 240 000 ₽<small>срок 18 рабочих дней</small></div><a class="btn btn-sm btn-dark" href="#" data-calc data-calc-title="Комплект «Одежда»" data-calc-sub="Укажите площадь и формат, подберём состав">Рассчитать</a></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Проекты -->
+<section class="section blk" data-tag="kp" data-label="Новый блок: по КП. Выполненные проекты с фильтром по нишам, схема Задача / Материалы и сроки / Результат" id="cases" style="background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="container">
+    <div class="section-head">
+      <div><span class="eyebrow">Выполненные проекты</span><h2>Что мы уже сделали в Иркутске и области</h2><p>Формат кейса: задача, материалы и сроки, фото результата. В прототипе вместо фото объектов стоят рендеры с сайта, тексты кейсов условные и заполняются реальными проектами.</p></div>
+      <a class="btn btn-outline" href="#">Все проекты</a>
+    </div>
+    <div class="tabs" data-tabs="#case-grid">
+      <button class="tab active" data-filter="all">Все</button>
+      <button class="tab" data-filter="apteka">Аптеки</button>
+      <button class="tab" data-filter="ostrov">Островки в ТЦ</button>
+      <button class="tab" data-filter="odezhda">Магазины одежды</button>
+      <button class="tab" data-filter="produkty">Продукты</button>
+      <button class="tab" data-filter="ofis">Офисы и ресепшн</button>
+    </div>
+    <div class="case-grid" id="case-grid">
+      <article class="case" data-niche="apteka"><div class="pic"><img src="../assets/img/vitrina-a-012.jpg" alt=""><span class="chip">Аптека</span></div><div class="body"><h3>Аптека 18 м², Иркутск</h3><dl><dt>Задача</dt><dd>Оснастить торговый зал под открытие за 3 недели, витрины по требованиям СанПиН</dd><dt>Материалы, сроки</dt><dd>ЛДСП 16 мм белый, стекло 5 мм, LED-полки. Изготовление 12 дней, монтаж 1 день</dd><dt>Результат</dt><dd>8 витрин, прилавок-касса, шкаф для запасов. Сдано до даты открытия</dd></dl></div></article>
+      <article class="case" data-niche="ostrov"><div class="pic"><img src="../assets/img/ostrov-ro-003.jpg" alt=""><span class="chip">Островок в ТЦ</span></div><div class="body"><h3>Островок косметики 6 м², ТЦ</h3><dl><dt>Задача</dt><dd>Согласовать проект с администрацией ТЦ и смонтировать ночью без остановки работы центра</dd><dt>Материалы, сроки</dt><dd>ЛДСП 25 мм, стекло 6 мм закалённое, фриз с подсветкой. 3D-проект за сутки, изготовление 10 дней</dd><dt>Результат</dt><dd>Согласование с первого раза, монтаж за одну ночь</dd></dl></div></article>
+      <article class="case" data-niche="odezhda"><div class="pic"><img src="../assets/img/stellazh-p-008.jpg" alt=""><span class="chip">Одежда</span></div><div class="body"><h3>Магазин одежды 45 м²</h3><dl><dt>Задача</dt><dd>Заменить старое оборудование, увеличить выкладку без расширения зала</dd><dt>Материалы, сроки</dt><dd>Экономпанели, хромированная навеска, столы из ЛДСП. 14 дней</dd><dt>Результат</dt><dd>Выкладка выросла на треть, примерочная и касса в комплекте</dd></dl></div></article>
+      <article class="case" data-niche="produkty"><div class="pic"><img src="../assets/img/vitrina-k-002.jpg" alt=""><span class="chip">Продукты</span></div><div class="body"><h3>Кондитерский отдел в супермаркете</h3><dl><dt>Задача</dt><dd>Витрины для конфет и сыпучих с удобным доступом покупателя</dd><dt>Материалы, сроки</dt><dd>ЛДСП, стекло, пластиковые диспенсеры. 9 дней</dd><dt>Результат</dt><dd>12 модулей, прилавок с весами, монтаж за смену</dd></dl></div></article>
+      <article class="case" data-niche="ofis"><div class="pic"><img src="../assets/img/stoyka-r-001.jpg" alt=""><span class="chip">Офис</span></div><div class="body"><h3>Ресепшн клиники</h3><dl><dt>Задача</dt><dd>Стойка администратора на два рабочих места с нишей для оргтехники</dd><dt>Материалы, сроки</dt><dd>ЛДСП 25 мм, столешница с кромкой ПВХ 2 мм, подсветка фасада. 8 дней</dd><dt>Результат</dt><dd>Стойка 3,2 м по размерам холла, установка за 4 часа</dd></dl></div></article>
+      <article class="case" data-niche="apteka"><div class="pic"><img src="../assets/img/shkaf-of-003.jpg" alt=""><span class="chip">Аптека</span></div><div class="body"><h3>Аптечный пункт в ТЦ</h3><dl><dt>Задача</dt><dd>Компактное оснащение 9 м² с местом для холодильника</dd><dt>Материалы, сроки</dt><dd>ЛДСП 16 мм, стекло 5 мм. 7 дней</dd><dt>Результат</dt><dd>4 витрины, касса, шкаф. Уложились в бюджет клиента</dd></dl></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- Как мы работаем -->
+<section class="section blk" data-tag="old" data-label="Существующий блок, переработан: текст «Ведение заказа» превращён в 6 шагов" id="delivery">
+  <div class="container">
+    <div class="section-head">
+      <div><span class="eyebrow">Как мы работаем</span><h2>От плана помещения до монтажа: 6 шагов</h2><p>Закупщик видит сроки на каждом этапе и понимает, что происходит после заявки.</p></div>
+    </div>
+    <div class="steps">
+      <div class="step"><b>Заявка и план</b><span>Отправляете план помещения, чертёж или список позиций удобным способом</span><span class="time">ответ за 15 минут</span></div>
+      <div class="step"><b>Замер и консультация</b><span>Выезд специалиста по Иркутску бесплатно, уточняем требования ТЦ</span><span class="time">1 день</span></div>
+      <div class="step"><b>3D-проект и смета</b><span>Визуализация для согласования с арендодателем, фиксированная смета</span><span class="time">24 часа</span></div>
+      <div class="step"><b>Договор</b><span>Фиксируем цену, срок и гарантию. Предоплата, работаем с НДС</span><span class="time">1 день</span></div>
+      <div class="step"><b>Производство</b><span>Собственный цех: раскрой, кромка, стекло, сборка, упаковка</span><span class="time">7 до 14 дней</span></div>
+      <div class="step"><b>Доставка и монтаж</b><span>Доставка по Иркутску и области, сборка на объекте, в том числе ночью</span><span class="time">1 до 2 дней</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Доверие и гарантии -->
+<section class="section blk" data-tag="kp" data-label="Новый блок: по КП. Логотипы ТЦ-партнёров, сертификаты, юридические гарантии">
+  <div class="container">
+    <div class="section-head">
+      <div><span class="eyebrow">Доверие и гарантии</span><h2>Работаем по стандартам торговых центров</h2><p>Закрывает главный страх арендатора: «не согласуют» и «не успеем к открытию».</p></div>
+    </div>
+    <div class="trust-wrap">
+      <div class="card">
+        <h3>Торговые центры и клиенты, с которыми работали</h3>
+        <p class="muted small" style="margin-top:6px">Плашки заменяются логотипами реальных партнёров. Реальные логотипы запросить у клиента.</p>
+        <div class="logos">
+          <div class="logo-ph">Логотип ТЦ 1</div><div class="logo-ph">Логотип ТЦ 2</div><div class="logo-ph">Логотип ТЦ 3</div><div class="logo-ph">Логотип ТЦ 4</div>
+          <div class="logo-ph">Аптечная сеть</div><div class="logo-ph">Сеть магазинов</div><div class="logo-ph">Клиника</div><div class="logo-ph">Ваш логотип</div>
+        </div>
+        <h3 style="margin-top:22px">Сертификаты на материалы</h3>
+        <div class="certs"><div class="cert">ЛДСП, класс Е1</div><div class="cert">Стекло закалённое</div><div class="cert">Пожарный сертификат</div><div class="cert">Кромка ПВХ</div></div>
+      </div>
+      <div class="card">
+        <h3>Гарантии в договоре</h3>
+        <div class="guar">
+          <div class="g"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 4 4L19 6"/></svg><div><b>Фиксированная цена и срок</b><span>Прописываем в договоре, при задержке по нашей вине компенсируем</span></div></div>
+          <div class="g"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 4 4L19 6"/></svg><div><b>Гарантия на изделия и монтаж</b><span>Срок гарантии <span class="fill">уточнить у клиента</span>, постгарантийный ремонт и доукомплектация</span></div></div>
+          <div class="g"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 4 4L19 6"/></svg><div><b>По требованиям арендодателя</b><span>Высота фриза, материалы, освещение и электрика по техзаданию ТЦ, помогаем с согласованием</span></div></div>
+          <div class="g"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 4 4L19 6"/></svg><div><b>Документы для юрлиц</b><span>Счёт, договор, УПД, работа с НДС, оплата по безналу</span></div></div>
+          <div class="g"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 4 4L19 6"/></svg><div><b>Замер бесплатно</b><span>Выезд специалиста по Иркутску, точные размеры под ваше помещение</span></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Материалы -->
+<section class="section blk" data-tag="old" data-label="Существующий блок, переработан: плитка «Каталог цветов» стала блоком материалов">
+  <div class="container">
+    <div class="section-head">
+      <div><span class="eyebrow">Материалы и цвета</span><h2>Из чего делаем</h2></div>
+      <a class="btn btn-outline" href="https://otm-group.ru/catalog/ldsp/">Каталог цветов ЛДСП</a>
+    </div>
+    <div class="mat-grid">
+      <div class="mat"><div class="sw"><i style="background:#F3F1EC"></i><i style="background:#3B2A21"></i><i style="background:#8B4A2B"></i><i style="background:#B9B5AE"></i><i style="background:#D9C4A3"></i></div><b>ЛДСП 16 и 25 мм</b><span>Egger, Lamarty, более 40 декоров: белый, венге, дуб, орех, титан. Кромка ПВХ</span></div>
+      <div class="mat"><div class="sw"><i style="background:#DCEBEF"></i><i style="background:#C9DEE5"></i></div><b>Стекло 5 и 6 мм</b><span>Полки и фасады, закалённое стекло для островков в ТЦ, полировка кромки</span></div>
+      <div class="mat"><div class="sw"><i style="background:#C8CBD0"></i><i style="background:#2B2B2B"></i></div><b>Алюминиевый профиль</b><span>Серебро и чёрный, витрины и прилавки серий на профиле, замки и ролики</span></div>
+      <div class="mat"><div class="sw"><i style="background:#FFF3C4"></i><i style="background:#FFFFFF;border-color:#ccc"></i></div><b>LED-подсветка</b><span>Полки, фризы, торцы. Тёплый и холодный свет, блок питания в комплекте</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Отзывы -->
+<section class="section blk" data-tag="res" data-label="Новый блок: по результатам исследования. Отзывы и ссылка на Яндекс Карты (у ОТМ 0 отзывов, у лидеров до 179)">
+  <div class="container">
+    <div class="section-head">
+      <div><span class="eyebrow">Отзывы</span><h2>Что говорят владельцы магазинов и аптек</h2><p>Тексты отзывов в прототипе условные. Раздел заполняется отзывами из Яндекс Карт и благодарственными письмами.</p></div>
+      <div class="rating-box"><b><span class="fill">4,9</span></b><div><div>Оценка на Яндекс Картах</div><a class="small" href="#" style="color:var(--brand);font-weight:600">Читать все отзывы</a></div></div>
+    </div>
+    <div class="rev-grid">
+      <div class="rev"><div class="stars">★★★★★</div><p>Открывали аптеку, сроки горели. Сделали 3D-проект на следующий день, витрины привезли и собрали за один день до открытия.</p><div class="who"><i>А</i><div><b>Пример отзыва</b><br><span class="muted">аптека, Иркутск</span></div></div></div>
+      <div class="rev"><div class="stars">★★★★★</div><p>Островок в ТЦ согласовали с администрацией с первого раза, потому что проект был по их требованиям. Монтаж прошёл ночью.</p><div class="who"><i>М</i><div><b>Пример отзыва</b><br><span class="muted">островок косметики</span></div></div></div>
+      <div class="rev"><div class="stars">★★★★★</div><p>Понравилось, что сразу назвали цену за комплект и срок, а не «по запросу». Работаем по договору с НДС.</p><div class="who"><i>С</i><div><b>Пример отзыва</b><br><span class="muted">сеть магазинов</span></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Форма расчёта -->
+<section class="section blk" data-tag="mix" data-label="Существующий блок (форма замера), переработан по КП: отправка плана или чертежа в 1 клик">
+  <div class="container">
+    <div class="calc">
+      <div>
+        <span class="eyebrow" style="color:#F0B8A9">Расчёт за 1 рабочий день</span>
+        <h2>Отправьте план помещения или чертёж, вернём смету и 3D-проект</h2>
+        <p>Считаем по вашим размерам, а не по каталогу. Подойдёт фото плана от руки.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 4 4L19 6"/></svg>Подскажем по требованиям ТЦ к островкам и витринам</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 4 4L19 6"/></svg>Зафиксируем срок и цену в договоре</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 4 4L19 6"/></svg>Замер по Иркутску бесплатно</li>
+        </ul>
+        <div style="display:flex;gap:8px;margin-top:20px;flex-wrap:wrap">
+          <a class="btn btn-outline" style="color:#fff;border-color:rgba(255,255,255,.4)" href="#">Написать в WhatsApp</a>
+          <a class="btn btn-outline" style="color:#fff;border-color:rgba(255,255,255,.4)" href="#">Написать в Telegram</a>
+          <a class="btn btn-outline" style="color:#fff;border-color:rgba(255,255,255,.4)" href="#">Написать в MAX</a>
+        </div>
+      </div>
+      <form class="form">
+        <div class="row2">
+          <label class="field"><input type="text" placeholder="Имя" required></label>
+          <label class="field"><input type="tel" placeholder="Телефон" required></label>
+        </div>
+        <label class="field"><input type="text" placeholder="Компания или ИП (необязательно)"></label>
+        <label class="field"><select><option>Тип объекта</option><option>Аптека</option><option>Островок в ТЦ</option><option>Магазин одежды и обуви</option><option>Продукты, кондитерская</option><option>Салон связи, оптика</option><option>Офис, клиника</option><option>Другое</option></select></label>
+        <label class="upload"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 16V4m0 0 4 4m-4-4-4 4"/><path d="M4 16v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3"/></svg><span><b>Прикрепить план, чертёж или фото</b>PDF, DWG, JPG, до 20 МБ</span><input type="file" hidden></label>
+        <button class="btn btn-primary btn-block" type="submit" style="margin-top:12px">Отправить на расчёт</button>
+        <div class="consent">Нажимая кнопку, вы соглашаетесь с обработкой персональных данных</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section blk" data-tag="res" data-label="Новый блок: по результатам исследования. FAQ для закупщика, ни у одного местного конкурента нет">
+  <div class="container">
+    <div class="section-head">
+      <div><span class="eyebrow">Вопросы закупщиков</span><h2>Что спрашивают перед заказом</h2></div>
+    </div>
+    <div class="faq">
+      <details open><summary>Сколько стоит и от чего зависит цена?</summary><div class="a">Цена складывается из размеров, материала корпуса (ЛДСП 16 или 25 мм), стекла, подсветки и фурнитуры. В каталоге указана цена «от» за типовой комплект, точную смету по вашим размерам присылаем за 1 рабочий день.</div></details>
+      <details><summary>Успеете к дате открытия?</summary><div class="a">Типовые модели делаем от 7 рабочих дней, комплекты для аптек и островков от 10 до 14 дней. Срок фиксируем в договоре. Если открытие в ТЦ, монтируем ночью, чтобы не мешать работе центра.</div></details>
+      <details><summary>Согласуете проект с администрацией торгового центра?</summary><div class="a">Да. Делаем 3D-визуализацию и чертежи по техтребованиям ТЦ: высота фриза, материалы, освещение, электрика. Опыт согласований с иркутскими ТЦ есть, помогаем пройти его с первого раза.</div></details>
+      <details><summary>Работаете с юрлицами и НДС?</summary><div class="a">Работаем с ИП и ООО по договору, выставляем счёт, предоставляем закрывающие документы. Условия по НДС и предоплате уточняйте у менеджера, они фиксируются в договоре.</div></details>
+      <details><summary>Можно ли изменить размеры и цвет модели из каталога?</summary><div class="a">Да, любая модель изготавливается под ваши размеры и в любом декоре ЛДСП из каталога цветов. Нажмите «Рассчитать по своим размерам» в карточке товара.</div></details>
+      <details><summary>Какая гарантия и что делать, если что-то сломалось?</summary><div class="a">Гарантия на изделия и монтаж прописана в договоре, срок уточняется. Выезжаем на ремонт и доукомплектацию по Иркутску, запчасти и фурнитура всегда в наличии на производстве.</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- О компании -->
+<section class="section blk" data-tag="old" data-label="Существующий блок, переработан: коротко и с фактами, вместо демо-текста шаблона на странице /about/" id="about">
+  <div class="container">
+    <div class="about">
+      <div>
+        <span class="eyebrow">О компании</span>
+        <h2>ОТМ Групп: производство торгового оборудования в Иркутске с 2013 года</h2>
+        <p style="margin-top:12px;color:var(--ink-2)">Торгово-производственная компания. Делаем витрины, прилавки, торговые острова, стеллажи и ресепшн из ЛДСП, стекла и алюминиевого профиля. Собственный цех, выезд на замер бесплатно, доставка по Иркутску, области и России.</p>
+        <div class="facts">
+          <div><b>2013</b>год основания</div>
+          <div><b>208</b>моделей в каталоге</div>
+          <div><b>Свой цех</b>раскрой, кромка, стекло, сборка</div>
+          <div><b>Иркутск и область</b>доставка и монтаж, отгрузка ТК по РФ</div>
+        </div>
+      </div>
+      <div class="pic">Фото производства и команды<br><span class="small">Заполняется реальными фотографиями клиента</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Контакты -->
+<section class="section blk" data-tag="old" data-label="Существующий блок: карта проезда и контакты" id="contacts">
+  <div class="container">
+    <div class="section-head"><div><span class="eyebrow">Контакты</span><h2>Приезжайте на производство или вызовите замерщика</h2></div></div>
+    <div class="contacts">
+      <div class="card">
+        <div class="row"><span>Телефон</span><span><b>+7 (3952) 72-72-10</b>отдел продаж</span></div>
+        <div class="row"><span>Мессенджеры</span><span>WhatsApp, Telegram, MAX: тот же номер</span></div>
+        <div class="row"><span>E-mail</span><span>otm-group@mail.ru</span></div>
+        <div class="row"><span>Адрес</span><span>Иркутск, <span class="fill">адрес производства: уточнить у клиента</span></span></div>
+        <div class="row"><span>Часы работы</span><span>Ежедневно с 9:00 до 18:00</span></div>
+        <div style="margin-top:14px;display:flex;gap:8px;flex-wrap:wrap"><a class="btn btn-primary" href="#" data-calc data-calc-title="Вызвать замерщика" data-calc-sub="Выезд по Иркутску бесплатно, согласуем удобное время">Вызвать замерщика</a><a class="btn btn-outline" href="#">Построить маршрут</a></div>
+      </div>
+      <div class="map">Карта Яндекса с меткой производства</div>
+    </div>
+  </div>
+</section>
+
+<!-- Подвал -->
+<footer class="footer blk" data-tag="old" data-label="Существующий блок, переработан: категории, ниши, документы">
+  <div class="container">
+    <div class="cols">
+      <div>
+        <img src="../assets/img/logo.png" alt="ОТМ Групп" style="height:36px;filter:brightness(0) invert(1);margin-bottom:12px">
+        <p>Торговое оборудование и мебель для бизнеса в Иркутске от производителя. Проектирование, производство, доставка и монтаж.</p>
+        <p><b style="color:#fff">+7 (3952) 72-72-10</b><br>otm-group@mail.ru<br>Ежедневно 9:00 до 18:00</p>
+      </div>
+      <div><h4>Каталог</h4><a href="catalog.html">Витрины</a><a href="catalog.html">Прилавки и кассы</a><a href="catalog.html">Торговые острова</a><a href="catalog.html">Стеллажи и экономпанели</a><a href="catalog.html">Ресепшн и стойки</a><a href="catalog.html">Тумбы и подтоварники</a><a href="catalog.html">Для конфет и сыпучих</a></div>
+      <div><h4>Решения</h4><a href="#niches">Аптеки</a><a href="#niches">Островки в ТЦ</a><a href="#niches">Одежда и обувь</a><a href="#niches">Продукты</a><a href="#niches">Салоны связи</a><a href="#niches">Офисы и клиники</a><a href="https://otm-group.ru/kukhni-na-zakaz/">Мебель для дома</a></div>
+      <div><h4>Компания</h4><a href="#cases">Проекты</a><a href="#delivery">Доставка и монтаж</a><a href="#about">О компании</a><a href="#">Гарантии и договор</a><a href="#">Реквизиты</a><a href="#">Обработка персональных данных</a><a href="#">Публичная оферта</a></div>
+    </div>
+    <div class="bottom"><span>ОТМ Групп, торгово-производственная компания, Иркутск. 2013 по 2026</span><span>Прототип. Цены «от», цифры с пометкой и тексты кейсов условные, заполняются данными клиента</span></div>
+  </div>
+</footer>
+
+<!-- Липкая панель на мобильном -->
+<div class="sticky-bar blk" data-tag="res" data-label="Новый: липкая панель">
+  <a class="btn btn-outline" href="tel:+73952727210">Позвонить</a>
+  <a class="btn btn-outline" href="#">WhatsApp</a>
+  <a class="btn btn-primary" href="#" data-calc data-calc-title="Рассчитать по плану помещения" data-calc-sub="Приложите план или фото, вернём смету за 1 рабочий день">Рассчитать</a>
+</div>
+
+<!-- Модальная форма -->
+<div class="modal">
+  <form class="box">
+    <button class="x" type="button" data-close-modal aria-label="Закрыть">✕</button>
+    <h3>Рассчитать проект</h3>
+    <div class="sub">Вернём смету и 3D-проект за 1 рабочий день</div>
+    <div class="prod-line" style="display:none"><span></span></div>
+    <label class="field"><input type="text" placeholder="Имя" required></label>
+    <label class="field"><input type="tel" placeholder="Телефон или мессенджер" required></label>
+    <label class="field"><textarea rows="3" placeholder="Размеры, помещение, сроки открытия. Можно коротко"></textarea></label>
+    <label class="upload"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 16V4m0 0 4 4m-4-4-4 4"/><path d="M4 16v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3"/></svg><span><b>Прикрепить план, чертёж или фото</b>PDF, DWG, JPG, до 20 МБ</span><input type="file" hidden></label>
+    <button class="btn btn-primary btn-block" type="submit" style="margin-top:12px">Отправить</button>
+    <div class="reply-note"><i></i>Ответим в течение 15 минут в рабочее время</div>
+    <div class="consent">Нажимая кнопку, вы соглашаетесь с обработкой персональных данных</div>
+  </form>
+</div>
+
+<script src="../assets/app.js"></script>
+</body>
+</html>

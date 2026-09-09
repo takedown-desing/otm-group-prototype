@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Прототип: Каталог. Торговые витрины в Иркутске от производителя, ОТМ Групп</title>
+<meta name="description" content="Прототип листинга каталога otm-group.ru: фильтры по назначению, материалу и размерам, цены «от», лид-магниты внутри сетки.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%277%27 fill=%27%23E2573B%27/%3E%3Ctext x=%2716%27 y=%2722%27 font-size=%2716%27 font-family=%27Arial%27 font-weight=%27700%27 fill=%27white%27 text-anchor=%27middle%27%3EO%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+
+<div class="proto-bar">
+  <span class="pb-title">Прототип ОТМ Групп</span>
+  <nav>
+    <a href="../index.html">Обзор</a>
+    <a href="home.html">Главная</a>
+    <a href="catalog.html">Каталог</a>
+    <a href="product.html">Карточка товара</a>
+  </nav>
+  <div class="pb-legend">
+    <span><i style="background:#6B7280"></i>Существующий блок</span>
+    <span><i style="background:#2563EB"></i>Новый: по КП</span>
+    <span><i style="background:#15803D"></i>Новый: по исследованию</span>
+    <button class="pb-toggle" data-toggle-tags>Скрыть пометки</button>
+  </div>
+</div>
+
+<div class="topbar">
+  <div class="container">
+    <span>Иркутск, <span class="fill-note">адрес производства: уточнить у клиента</span></span>
+    <span class="hide-m">Ежедневно 9:00 до 18:00</span>
+    <span class="grow"></span>
+    <a class="hide-m" href="mailto:otm-group@mail.ru">otm-group@mail.ru</a>
+    <span class="hide-m">Работаем с ИП и юрлицами, договор, НДС</span>
+  </div>
+</div>
+
+<header class="header">
+  <div class="container">
+    <a class="logo" href="home.html"><img src="../assets/img/logo.png" alt="ОТМ Групп"></a>
+    <div class="seg"><a class="active" href="home.html">Для бизнеса</a><a href="https://otm-group.ru/kukhni-na-zakaz/">Для дома</a></div>
+    <label class="search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input type="search" placeholder="Поиск по каталогу: витрина, прилавок, островок, ресепшн">
+    </label>
+    <div class="hdr-phone"><b>+7 (3952) 72-72-10</b><span>отдел продаж, ответим за 15 минут</span></div>
+    <div class="msgs">
+      <a class="msg wa" href="#" title="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 12 12 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg></a>
+      <a class="msg tg" href="#" title="Telegram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.6 18.7 19.5c-.2 1-.9 1.3-1.8.8l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.4-5 9.1-8.2c.4-.4-.1-.5-.6-.2L6.2 13.2 1.4 11.7c-1-.3-1-1 .2-1.5L20.5 3c.9-.3 1.6.2 1.4 1.6z"/></svg></a>
+      <a class="msg mx" href="#" title="MAX"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"><path d="M4 19V5l8 9 8-9v14"/></svg></a>
+    </div>
+    <a class="btn btn-primary" href="#" data-calc data-calc-title="Рассчитать проект" data-calc-sub="Приложите план помещения или список позиций, вернём смету и 3D-проект за 1 рабочий день">Рассчитать проект</a>
+    <a class="cart btn btn-outline btn-sm" href="#" title="Корзина"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6"/><circle cx="10" cy="20" r="1"/><circle cx="17" cy="20" r="1"/></svg><span class="cnt">2</span></a>
+    <button class="burger" data-open-menu aria-label="Меню"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  </div>
+</header>
+
+<nav class="nav">
+  <div class="container">
+    <a class="cat-all" href="catalog.html">Каталог</a>
+    <a href="catalog.html" class="active">Витрины</a>
+    <a href="catalog.html">Прилавки и кассы</a>
+    <a href="catalog.html">Торговые острова</a>
+    <a href="catalog.html">Стеллажи и экономпанели</a>
+    <a href="catalog.html">Ресепшн и стойки</a>
+    <a href="catalog.html">Тумбы и подтоварники</a>
+    <a href="catalog.html">Шкафы для печатной продукции</a>
+    <a href="catalog.html">Для конфет и сыпучих</a>
+    <span class="sep"></span>
+    <a href="home.html#niches">Решения по нишам</a>
+    <a href="home.html#cases">Проекты</a>
+    <a href="home.html#delivery">Доставка и монтаж</a>
+    <span class="sep"></span>
+    <a class="b2c" href="https://otm-group.ru/kukhni-na-zakaz/">Мебель для дома</a>
+  </div>
+</nav>
+
+<div class="drawer">
+  <div class="panel">
+    <button class="close" data-close-menu aria-label="Закрыть">✕</button>
+    <div class="seg" style="display:inline-flex"><a class="active" href="home.html">Для бизнеса</a><a href="https://otm-group.ru/kukhni-na-zakaz/">Для дома</a></div>
+    <h4>Каталог</h4>
+    <a href="catalog.html">Витрины</a><a href="catalog.html">Прилавки и кассы</a><a href="catalog.html">Торговые острова</a><a href="catalog.html">Стеллажи и экономпанели</a><a href="catalog.html">Ресепшн и стойки</a><a href="catalog.html">Тумбы и подтоварники</a><a href="catalog.html">Шкафы для печатной продукции</a><a href="catalog.html">Для конфет и сыпучих</a>
+    <h4>Компания</h4>
+    <a href="home.html#niches">Решения по нишам</a><a href="home.html#cases">Проекты</a><a href="home.html#delivery">Доставка и монтаж</a><a href="home.html#about">О компании</a>
+    <h4>Связь</h4>
+    <a href="tel:+73952727210">+7 (3952) 72-72-10</a><a href="#">WhatsApp</a><a href="#">Telegram</a><a href="#">MAX</a>
+  </div>
+</div>
+
+<main class="container">
+
+  <!-- Хлебные крошки -->
+  <div class="crumbs blk blk-inline" data-tag="kp" data-label="Новый блок: по КП. Хлебные крошки для UX и SEO">
+    <a href="home.html">Главная</a><span class="sep">/</span><a href="catalog.html">Каталог</a><span class="sep">/</span><span>Витрины</span>
+  </div>
+
+  <!-- Заголовок категории -->
+  <div class="cat-head blk blk-inline" data-tag="old" data-label="Существующий блок, переработан: заголовок, число моделей, короткое описание">
+    <div>
+      <h1>Торговые витрины <span class="cnt">101 модель</span></h1>
+      <p>Стеклянные на алюминиевом профиле и из ЛДСП, с LED-подсветкой и накопителем. Изготовим по вашим размерам за 7 до 14 дней, доставим и смонтируем по Иркутску и области. Цена «от» указана за типовой комплект.</p>
+    </div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap"><a class="btn btn-primary" href="#" data-calc data-calc-title="Рассчитать витрины по плану" data-calc-sub="Приложите план зала, подберём модели и посчитаем комплект">Рассчитать комплект витрин</a></div>
+  </div>
+
+  <!-- Подкатегории -->
+  <div class="subcats blk blk-inline" data-tag="res" data-label="Новый блок: по результатам исследования. Подкатегории и ниши плашками (westcom, absolutsib)">
+    <a class="active" href="#">Все витрины <small>101</small></a>
+    <a href="#">Из ЛДСП с накопителем <small>24</small></a>
+    <a href="#">Стекло и профиль <small>35</small></a>
+    <a href="#">С подсветкой <small>32</small></a>
+    <a href="#">Для аптек <small>24</small></a>
+    <a href="#">Для конфет и сыпучих <small>24</small></a>
+    <a href="#">Угловые <small>6</small></a>
+    <a href="#">Настольные <small>8</small></a>
+  </div>
+
+  <div class="catalog-layout">
+
+    <!-- Фильтр -->
+    <aside class="filters blk" data-tag="kp" data-label="Новый блок: по КП. B2B-фильтр по назначению, материалу, размерам, цене">
+      <div class="f-head"><h3>Подбор по параметрам</h3><a href="#">Сбросить</a></div>
+      <div class="fgroup"><b>Назначение</b>
+        <label><input type="checkbox" checked> Аптека <small>24</small></label>
+        <label><input type="checkbox"> Магазин одежды и обуви <small>31</small></label>
+        <label><input type="checkbox"> Продукты, кондитерская <small>24</small></label>
+        <label><input type="checkbox"> Салон связи, электроника <small>18</small></label>
+        <label><input type="checkbox"> Ювелирные, оптика <small>12</small></label>
+        <label><input type="checkbox"> Островок в ТЦ <small>15</small></label>
+      </div>
+      <div class="fgroup"><b>Тип витрины</b>
+        <label><input type="checkbox"> Стеклянная на профиле <small>35</small></label>
+        <label><input type="checkbox"> Из ЛДСП с накопителем <small>24</small></label>
+        <label><input type="checkbox"> Угловая <small>6</small></label>
+        <label><input type="checkbox"> Настольная <small>8</small></label>
+      </div>
+      <div class="fgroup"><b>Размеры, мм</b>
+        <div class="range"><input type="number" placeholder="Ширина от"><input type="number" placeholder="до"></div>
+        <div class="range" style="margin-top:6px"><input type="number" placeholder="Высота от"><input type="number" placeholder="до 2000"></div>
+        <div class="range" style="margin-top:6px"><input type="number" placeholder="Глубина от"><input type="number" placeholder="до"></div>
+        <div class="hint">Типовые: ширина 300, 400, 500, 900. Любой размер под заказ</div>
+      </div>
+      <div class="fgroup"><b>Материал корпуса</b>
+        <label><input type="checkbox"> ЛДСП 16 мм <small>68</small></label>
+        <label><input type="checkbox"> ЛДСП 25 мм <small>14</small></label>
+        <label><input type="checkbox"> Алюминиевый профиль <small>35</small></label>
+        <label><input type="checkbox"> Стекло 6 мм закалённое <small>20</small></label>
+      </div>
+      <div class="fgroup"><b>Подсветка</b>
+        <label><input type="checkbox"> LED-полки <small>32</small></label>
+        <label><input type="checkbox"> LED-фриз <small>11</small></label>
+        <label><input type="checkbox"> Без подсветки <small>58</small></label>
+      </div>
+      <div class="fgroup"><b>Цвет корпуса</b>
+        <div class="swatches" style="margin-top:4px">
+          <span class="swatch active" title="Белый" style="background:#F3F1EC"></span><span class="swatch" title="Венге" style="background:#3B2A21"></span><span class="swatch" title="Вишня" style="background:#8B4A2B"></span><span class="swatch" title="Дуб Кальяри" style="background:#C8A46A"></span><span class="swatch" title="Орех" style="background:#7A4A2E"></span><span class="swatch" title="Титан" style="background:#B9B5AE"></span><span class="swatch" title="Ясень шимо светлый" style="background:#D9C4A3"></span><span class="swatch" title="Ясень шимо тёмный" style="background:#6E5A45"></span>
+        </div>
+      </div>
+      <div class="fgroup"><b>Цена, ₽</b>
+        <div class="range"><input type="number" placeholder="от 6 500"><input type="number" placeholder="до 45 000"></div>
+      </div>
+      <div class="fgroup"><b>Срок изготовления</b>
+        <label><input type="radio" name="t"> До 7 дней <small>44</small></label>
+        <label><input type="radio" name="t" checked> До 14 дней <small>101</small></label>
+      </div>
+      <div class="fgroup"><label><input type="checkbox"> Только с фото на объекте</label></div>
+      <div class="apply"><button class="btn btn-outline" type="button" data-close-filters>Закрыть</button><button class="btn btn-primary" type="button" data-close-filters>Показать 24</button></div>
+    </aside>
+
+    <div>
+      <!-- Тулбар -->
+      <div class="toolbar blk blk-inline" data-tag="old" data-label="Существующий блок (сортировка), переработан: счётчик, сортировка по цене и сроку, вид">
+        <div class="sort">
+          <button class="btn btn-outline btn-sm filter-btn" data-open-filters>Фильтр (2)</button>
+          <span>Сортировать:</span><a class="active" href="#">по популярности</a><a href="#">по цене</a><a href="#">по сроку</a>
+        </div>
+        <div class="views"><button class="active" title="Плитка"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="8" height="8"/><rect x="13" y="3" width="8" height="8"/><rect x="3" y="13" width="8" height="8"/><rect x="13" y="13" width="8" height="8"/></svg></button><button title="Список"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button></div>
+      </div>
+      <div class="active-filters"><span class="chip">Аптека <b>✕</b></span><span class="chip">Высота до 2000 мм <b>✕</b></span><span class="chip" style="background:transparent;color:var(--muted)">Найдено 24 модели</span></div>
+
+      <!-- Сетка товаров -->
+      <div class="prod-grid blk" data-tag="kp" data-label="Новый: по КП. Карточка с ценой «от», размером, материалом и сроком вместо «Цена по запросу»">
+        <article class="prod"><div class="pic"><div class="badges"><span class="chip ok">Хит</span></div><img src="../assets/img/vitrina-a-016.jpg" alt="Витрина А-016"><div class="colors"><i style="background:#F3F1EC"></i><i style="background:#3B2A21"></i><i style="background:#C8A46A"></i><i style="background:#B9B5AE"></i></div></div><h3><a href="product.html">Витрина А-016 остеклённая с накопителем</a></h3><div class="art">Арт. A-016, серия Альфа, 8 цветов ЛДСП</div><div class="specs"><span><b>Размер:</b> 300 × 2000 × 900 мм</span><span><b>Корпус:</b> ЛДСП 16 мм, стекло 5 мм, 2 полки</span><span><b>Подсветка:</b> LED-полки, опция</span></div><div class="p-row"><div class="price">от 7 900 ₽<small>за комплект</small></div><span class="term">срок 7 дней</span></div><div class="actions"><a class="btn btn-primary" href="#" data-calc data-calc-title="Рассчитать по своим размерам" data-calc-sub="Укажите размеры или приложите план" data-calc-product="Витрина А-016">Рассчитать по размерам</a><a class="btn btn-outline" href="#" title="В корзину"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6"/><circle cx="10" cy="20" r="1"/><circle cx="17" cy="20" r="1"/></svg></a></div></article>
+
+        <article class="prod"><div class="pic"><div class="badges"><span class="chip ok">Для аптек</span></div><img src="../assets/img/vitrina-a-012.jpg" alt="Витрина А-012"><div class="colors"><i style="background:#F3F1EC"></i><i style="background:#3B2A21"></i><i style="background:#8B4A2B"></i></div></div><h3><a href="product.html">Витрина А-012 пристенная 900 мм</a></h3><div class="art">Арт. A-012, серия Альфа</div><div class="specs"><span><b>Размер:</b> 900 × 2000 × 300 мм</span><span><b>Корпус:</b> ЛДСП 16 мм, стекло 5 мм, 4 полки</span><span><b>Подсветка:</b> LED-полки в комплекте</span></div><div class="p-row"><div class="price">от 12 400 ₽<small>за комплект</small></div><span class="term">срок 7 дней</span></div><div class="actions"><a class="btn btn-primary" href="#" data-calc data-calc-product="Витрина А-012" data-calc-title="Рассчитать по своим размерам">Рассчитать по размерам</a><a class="btn btn-outline" href="#" title="В корзину"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6"/><circle cx="10" cy="20" r="1"/><circle cx="17" cy="20" r="1"/></svg></a></div></article>
+
+        <article class="prod"><div class="pic"><img src="../assets/img/vitrina-k-017.jpg" alt="Витрина К-017"><div class="colors"><i style="background:#F3F1EC"></i><i style="background:#3B2A21"></i></div></div><h3><a href="product.html">Витрина К-017 для конфет с задней стенкой</a></h3><div class="art">Арт. K-017, серия для сыпучих</div><div class="specs"><span><b>Размер:</b> 300 × 2000 × 800 мм</span><span><b>Корпус:</b> ЛДСП 16 мм, задняя стенка ХДФ</span><span><b>Подсветка:</b> без подсветки</span></div><div class="p-row"><div class="price">6 500 ₽<small>цена с сайта</small></div><span class="term">срок 7 дней</span></div><div class="actions"><a class="btn btn-primary" href="#" data-calc data-calc-product="Витрина К-017" data-calc-title="Рассчитать по своим размерам">Рассчитать по размерам</a><a class="btn btn-outline" href="#" title="В корзину"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6"/><circle cx="10" cy="20" r="1"/><circle cx="17" cy="20" r="1"/></svg></a></div></article>
+
+        <!-- Лид-магнит -->
+        <div class="lead-card blk" data-tag="kp" data-label="Новый блок: по КП. Лид-магнит в листинге">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21 12 3l9 18H3z"/><path d="M12 10v5"/></svg></div>
+          <div><h3>Не нашли нужный размер?</h3><p>Изготовим витрину по вашим чертежам или по фото от руки за 10 рабочих дней. Любой декор ЛДСП из каталога цветов.</p></div>
+          <a class="btn" href="#" data-calc data-calc-title="Витрина по вашим размерам" data-calc-sub="Приложите чертёж или напишите размеры, посчитаем за 1 день">Отправить чертёж</a>
+        </div>
+
+        <article class="prod"><div class="pic"><img src="../assets/img/vitrina-g-014.jpg" alt="Витрина Г-014"><div class="colors"><i style="background:#F3F1EC"></i><i style="background:#7A4A2E"></i><i style="background:#B9B5AE"></i></div></div><h3><a href="product.html">Витрина Г-014 с накопителем и дверцами</a></h3><div class="art">Арт. G-014, серия Гранд</div><div class="specs"><span><b>Размер:</b> 400 × 2000 × 800 мм</span><span><b>Корпус:</b> ЛДСП 16 мм, стекло 5 мм, замок</span><span><b>Подсветка:</b> LED-полки, опция</span></div><div class="p-row"><div class="price">от 11 200 ₽<small>за комплект</small></div><span class="term">срок 10 дней</span></div><div class="actions"><a class="btn btn-primary" href="#" data-calc data-calc-product="Витрина Г-014" data-calc-title="Рассчитать по своим размерам">Рассчитать по размерам</a><a class="btn btn-outline" href="#" title="В корзину"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6"/><circle cx="10" cy="20" r="1"/><circle cx="17" cy="20" r="1"/></svg></a></div></article>
+
+        <article class="prod"><div class="pic"><div class="badges"><span class="chip">Настольная</span></div><img src="../assets/img/vitrina-k-002.jpg" alt="Витрина К-002"><div class="colors"><i style="background:#F3F1EC"></i><i style="background:#3B2A21"></i></div></div><h3><a href="product.html">Витрина К-002 настольная для конфет</a></h3><div class="art">Арт. K-002</div><div class="specs"><span><b>Размер:</b> 530 × 1300 × 900 мм</span><span><b>Корпус:</b> ЛДСП 16 мм, стекло 5 мм</span><span><b>Подсветка:</b> без подсветки</span></div><div class="p-row"><div class="price">6 500 ₽<small>цена с сайта</small></div><span class="term">срок 7 дней</span></div><div class="actions"><a class="btn btn-primary" href="#" data-calc data-calc-product="Витрина К-002" data-calc-title="Рассчитать по своим размерам">Рассчитать по размерам</a><a class="btn btn-outline" href="#" title="В корзину"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6"/><circle cx="10" cy="20" r="1"/><circle cx="17" cy="20" r="1"/></svg></a></div></article>
+
+        <article class="prod"><div class="pic"><img src="../assets/img/vitrina-a-005.jpg" alt="Витрина А-005"><div class="colors"><i style="background:#F3F1EC"></i><i style="background:#3B2A21"></i><i style="background:#C8A46A"></i></div></div><h3><a href="product.html">Витрина А-005 с задней стенкой ХДФ</a></h3><div class="art">Арт. A-005, серия Альфа</div><div class="specs"><span><b>Размер:</b> 330 × 2000 × 900 мм</span><span><b>Корпус:</b> ЛДСП 16 мм, стекло 5 мм, ХДФ</span><span><b>Подсветка:</b> LED-полки, опция</span></div><div class="p-row"><div class="price">от 8 400 ₽<small>за комплект</small></div><span class="term">срок 7 дней</span></div><div class="actions"><a class="btn btn-primary" href="#" data-calc data-calc-product="Витрина А-005" data-calc-title="Рассчитать по своим размерам">Рассчитать по размерам</a><a class="btn btn-outline" href="#" title="В корзину"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6"/><circle cx="10" cy="20" r="1"/><circle cx="17" cy="20" r="1"/></svg></a></div></article>
+
+        <article class="prod"><div class="pic"><img src="../assets/img/vitrina-g-001.jpg" alt="Витрина Г-001"><div class="colors"><i style="background:#F3F1EC"></i><i style="background:#8B4A2B"></i></div></div><h3><a href="product.html">Витрина Г-001 низкая, 1700 мм</a></h3><div class="art">Арт. G-001, серия Гранд</div><div class="specs"><span><b>Размер:</b> 400 × 1700 × 400 мм</span><span><b>Корпус:</b> ЛДСП 16 мм, стекло 5 мм</span><span><b>Подсветка:</b> LED-полки, опция</span></div><div class="p-row"><div class="price">от 9 600 ₽<small>за комплект</small></div><span class="term">срок 7 дней</span></div><div class="actions"><a class="btn btn-primary" href="#" data-calc data-calc-product="Витрина Г-001" data-calc-title="Рассчитать по своим размерам">Рассчитать по размерам</a><a class="btn btn-outline" href="#" title="В корзину"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6"/><circle cx="10" cy="20" r="1"/><circle cx="17" cy="20" r="1"/></svg></a></div></article>
+
+        <!-- Баннер комплекта -->
+        <div class="lead-card dark blk" data-tag="res" data-label="Новый блок: по исследованию. Комплект под нишу внутри сетки">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M9 4v16"/></svg></div>
+          <div><h3>Комплект «Аптека до 20 м²»</h3><p>6 витрин, прилавок-касса, шкаф для запасов, проект по СанПиН и монтаж. От 189 000 ₽, срок 14 дней.</p></div>
+          <a class="btn" href="home.html#catalog">Смотреть комплект</a>
+        </div>
+
+        <article class="prod"><div class="pic"><img src="../assets/img/vitrina-a-020.jpg" alt="Витрина А-020"><div class="colors"><i style="background:#F3F1EC"></i><i style="background:#B9B5AE"></i></div></div><h3><a href="product.html">Витрина А-020 угловая</a></h3><div class="art">Арт. A-020, серия Альфа</div><div class="specs"><span><b>Размер:</b> 300 × 2000 × 900 мм</span><span><b>Корпус:</b> ЛДСП 16 мм, стекло 5 мм</span><span><b>Подсветка:</b> LED-полки, опция</span></div><div class="p-row"><div class="price">от 9 900 ₽<small>за комплект</small></div><span class="term">срок 10 дней</span></div><div class="actions"><a class="btn btn-primary" href="#" data-calc data-calc-product="Витрина А-020" data-calc-title="Рассчитать по своим размерам">Рассчитать по размерам</a><a class="btn btn-outline" href="#" title="В корзину"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6"/><circle cx="10" cy="20" r="1"/><circle cx="17" cy="20" r="1"/></svg></a></div></article>
+
+        <article class="prod"><div class="pic"><img src="../assets/img/vitrina-a-025.jpg" alt="Витрина А-025"><div class="colors"><i style="background:#F3F1EC"></i><i style="background:#3B2A21"></i><i style="background:#D9C4A3"></i></div></div><h3><a href="product.html">Витрина А-025 высокая, 2100 мм</a></h3><div class="art">Арт. A-025, серия Альфа</div><div class="specs"><span><b>Размер:</b> 300 × 2100 × 900 мм</span><span><b>Корпус:</b> ЛДСП 16 мм, стекло 5 мм, 3 полки</span><span><b>Подсветка:</b> LED-полки, опция</span></div><div class="p-row"><div class="price">от 8 900 ₽<small>за комплект</small></div><span class="term">срок 7 дней</span></div><div class="actions"><a class="btn btn-primary" href="#" data-calc data-calc-product="Витрина А-025" data-calc-title="Рассчитать по своим размерам">Рассчитать по размерам</a><a class="btn btn-outline" href="#" title="В корзину"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6"/><circle cx="10" cy="20" r="1"/><circle cx="17" cy="20" r="1"/></svg></a></div></article>
+
+        <article class="prod"><div class="pic"><img src="../assets/img/vitrina-a-031.jpg" alt="Витрина А-031"><div class="colors"><i style="background:#F3F1EC"></i><i style="background:#7A4A2E"></i></div></div><h3><a href="product.html">Витрина А-031 с распашными дверцами</a></h3><div class="art">Арт. A-031, серия Альфа</div><div class="specs"><span><b>Размер:</b> 300 × 2100 × 900 мм</span><span><b>Корпус:</b> ЛДСП 16 мм, стекло 5 мм, замок</span><span><b>Подсветка:</b> LED-полки, опция</span></div><div class="p-row"><div class="price">от 10 300 ₽<small>за комплект</small></div><span class="term">срок 10 дней</span></div><div class="actions"><a class="btn btn-primary" href="#" data-calc data-calc-product="Витрина А-031" data-calc-title="Рассчитать по своим размерам">Рассчитать по размерам</a><a class="btn btn-outline" href="#" title="В корзину"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6"/><circle cx="10" cy="20" r="1"/><circle cx="17" cy="20" r="1"/></svg></a></div></article>
+      </div>
+
+      <div class="pager blk blk-inline" data-tag="old" data-label="Существующий блок: пагинация, добавлено «показать ещё»"><a class="active" href="#">1</a><a href="#">2</a><a href="#">3</a><a href="#">4</a><a class="more" href="#">Показать ещё 9</a></div>
+      <p class="muted small" style="text-align:center">Цены «от» в прототипе условные, кроме позиций с пометкой «цена с сайта». Число моделей взято из текущего каталога.</p>
+    </div>
+  </div>
+
+  <!-- Сравнение типов -->
+  <section class="section blk" data-tag="res" data-label="Новый блок: по результатам исследования. Таблица выбора типа витрины до перехода в карточку">
+    <div class="section-head"><div><span class="eyebrow">Как выбрать</span><h2>Какая витрина подойдёт вашему магазину</h2></div></div>
+    <div style="overflow-x:auto">
+      <table class="cmp-table">
+        <tr><th>Тип</th><th>Для чего</th><th>Материалы</th><th>Цена от</th><th>Срок</th></tr>
+        <tr><td><b>Стеклянная на алюминиевом профиле</b></td><td>Салоны связи, оптика, ювелирные, косметика. Максимальный обзор товара</td><td>Профиль, стекло 5 или 6 мм, LED-полки</td><td>от 9 900 ₽</td><td>7 до 10 дней</td></tr>
+        <tr><td><b>Из ЛДСП с накопителем</b></td><td>Аптеки, продукты, хозтовары. Запас товара внутри, замок</td><td>ЛДСП 16 мм, стекло 5 мм, кромка ПВХ</td><td>от 7 900 ₽</td><td>7 дней</td></tr>
+        <tr><td><b>С LED-подсветкой</b></td><td>Островки в ТЦ, витрины у входа, премиальная выкладка</td><td>Любой корпус, LED-лента на полках и фризе</td><td>плюс 1 900 ₽ к модели</td><td>плюс 1 день</td></tr>
+        <tr><td><b>Угловая или настольная</b></td><td>Углы зала, кассовая зона, небольшие помещения</td><td>ЛДСП 16 мм, стекло 5 мм</td><td>от 6 500 ₽</td><td>7 дней</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <!-- Текст категории -->
+  <section class="section blk" data-tag="res" data-label="Новый блок: по результатам исследования. Текст категории под региональные коммерческие запросы">
+    <div class="seo-text">
+      <h2>Торговые витрины в Иркутске от производителя</h2>
+      <p>Производим витрины для магазинов, аптек, салонов связи и островков в торговых центрах Иркутска с 2013 года. Собственный цех: раскрой ЛДСП, обработка кромки, резка и полировка стекла, сборка и упаковка. Любую модель из каталога изготовим по вашим размерам, в любом из 40 декоров ЛДСП, с подсветкой или без.</p>
+      <h3>Сроки и доставка</h3>
+      <p>Типовые витрины делаем за 7 рабочих дней, с подсветкой и нестандартными размерами за 10 до 14 дней. Доставляем по Иркутску и области своим транспортом, в другие регионы отгружаем транспортной компанией. Монтаж на объекте, в том числе ночью в ТЦ.</p>
+      <h3>Что нужно для расчёта</h3>
+      <p>Размеры помещения или фото плана от руки, желаемое число витрин и требования арендодателя, если открываетесь в ТЦ. Смету и 3D-проект присылаем за 1 рабочий день, замер по Иркутску бесплатно.</p>
+    </div>
+  </section>
+
+  <!-- FAQ категории -->
+  <section class="section blk" data-tag="res" data-label="Новый блок: по исследованию. Короткий FAQ категории">
+    <div class="faq">
+      <details><summary>Можно ли заказать витрину нестандартного размера?</summary><div class="a">Да, любая модель делается по вашим размерам. Нажмите «Рассчитать по размерам» в карточке или отправьте чертёж через форму в листинге.</div></details>
+      <details><summary>Есть ли витрины в наличии?</summary><div class="a">Изделия изготавливаются под заказ, типовые модели за 7 рабочих дней. Это честнее, чем «есть в наличии» на каждой карточке, и позволяет выбрать цвет и размер.</div></details>
+      <details><summary>Какая нагрузка на стеклянную полку?</summary><div class="a">Полка из стекла 5 мм длиной до 900 мм выдерживает до 15 кг равномерной нагрузки, из стекла 6 мм закалённого до 25 кг. Точные значения указаны в характеристиках каждой модели.</div></details>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="cols">
+      <div>
+        <img src="../assets/img/logo.png" alt="ОТМ Групп" style="height:36px;filter:brightness(0) invert(1);margin-bottom:12px">
+        <p>Торговое оборудование и мебель для бизнеса в Иркутске от производителя. Проектирование, производство, доставка и монтаж.</p>
+        <p><b style="color:#fff">+7 (3952) 72-72-10</b><br>otm-group@mail.ru<br>Ежедневно 9:00 до 18:00</p>
+      </div>
+      <div><h4>Каталог</h4><a href="catalog.html">Витрины</a><a href="catalog.html">Прилавки и кассы</a><a href="catalog.html">Торговые острова</a><a href="catalog.html">Стеллажи и экономпанели</a><a href="catalog.html">Ресепшн и стойки</a><a href="catalog.html">Тумбы и подтоварники</a><a href="catalog.html">Для конфет и сыпучих</a></div>
+      <div><h4>Решения</h4><a href="home.html#niches">Аптеки</a><a href="home.html#niches">Островки в ТЦ</a><a href="home.html#niches">Одежда и обувь</a><a href="home.html#niches">Продукты</a><a href="home.html#niches">Салоны связи</a><a href="home.html#niches">Офисы и клиники</a><a href="https://otm-group.ru/kukhni-na-zakaz/">Мебель для дома</a></div>
+      <div><h4>Компания</h4><a href="home.html#cases">Проекты</a><a href="home.html#delivery">Доставка и монтаж</a><a href="home.html#about">О компании</a><a href="#">Гарантии и договор</a><a href="#">Реквизиты</a><a href="#">Обработка персональных данных</a><a href="#">Публичная оферта</a></div>
+    </div>
+    <div class="bottom"><span>ОТМ Групп, торгово-производственная компания, Иркутск. 2013 по 2026</span><span>Прототип. Цены «от» и число моделей в фильтрах условные</span></div>
+  </div>
+</footer>
+
+<div class="sticky-bar blk" data-tag="kp" data-label="Новый: мобильный фильтр и расчёт">
+  <button class="btn btn-outline" type="button" data-open-filters>Фильтр (2)</button>
+  <a class="btn btn-primary" href="#" data-calc data-calc-title="Рассчитать по своим размерам" data-calc-sub="Укажите размеры или приложите план">Рассчитать по размерам</a>
+</div>
+
+<div class="modal">
+  <form class="box">
+    <button class="x" type="button" data-close-modal aria-label="Закрыть">✕</button>
+    <h3>Рассчитать по своим размерам</h3>
+    <div class="sub">Смета за 1 рабочий день, замер по Иркутску бесплатно</div>
+    <div class="prod-line" style="display:none"><img src="../assets/img/vitrina-a-016.jpg" alt=""><span></span></div>
+    <label class="field"><input type="text" placeholder="Имя" required></label>
+    <label class="field"><input type="tel" placeholder="Телефон или мессенджер" required></label>
+    <label class="field"><input type="text" placeholder="Размеры: ширина × высота × глубина, мм"></label>
+    <label class="upload"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 16V4m0 0 4 4m-4-4-4 4"/><path d="M4 16v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3"/></svg><span><b>Прикрепить план или чертёж</b>PDF, DWG, JPG, до 20 МБ</span><input type="file" hidden></label>
+    <button class="btn btn-primary btn-block" type="submit" style="margin-top:12px">Отправить</button>
+    <div class="reply-note"><i></i>Ответим в течение 15 минут в рабочее время</div>
+    <div class="consent">Нажимая кнопку, вы соглашаетесь с обработкой персональных данных</div>
+  </form>
+</div>
+
+<script src="../assets/app.js"></script>
+</body>
+</html>
