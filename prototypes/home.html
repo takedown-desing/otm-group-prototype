@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;700;800&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%277%27 fill=%27%23E2573B%27/%3E%3Ctext x=%2716%27 y=%2722%27 font-size=%2716%27 font-family=%27Arial%27 font-weight=%27700%27 fill=%27white%27 text-anchor=%27middle%27%3EO%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="../assets/styles.css?v=3">
+<link rel="stylesheet" href="../assets/styles.css?v=4">
 </head>
 <body>
 
@@ -31,7 +31,7 @@
 </div>
 
 <!-- Верхняя полоса -->
-<div class="topbar blk" data-tag="res" data-label="Новый блок: по результатам исследования">
+<div class="topbar blk" id="top" data-tag="res" data-label="Новый блок: по результатам исследования">
   <div class="container">
     <span>Иркутск, <span class="fill-note">адрес производства: уточнить у клиента</span></span>
     <span class="hide-m">Ежедневно 9:00 до 18:00</span>
@@ -98,7 +98,7 @@
 </div>
 
 <!-- Первый экран -->
-<section class="hero blk" data-tag="mix" data-label="Существующий блок, переработан + новое по КП: позиционирование, 3 B2B-буллета, форма отправки плана">
+<section class="hero blk" id="hero" data-tag="mix" data-label="Существующий блок, переработан + новое по КП: позиционирование, 3 B2B-буллета, форма отправки плана">
   <div class="container">
     <div>
       <span class="geo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>Производство в Иркутске, доставка по области и РФ</span>
@@ -129,7 +129,7 @@
 </section>
 
 <!-- Полоса доверия -->
-<div class="trust-strip blk" data-tag="res" data-label="Новый блок: по результатам исследования. Цифры вместо длинного текста (absolutsib, mr-66)">
+<div class="trust-strip blk" id="trust-strip" data-tag="res" data-label="Новый блок: по результатам исследования. Цифры вместо длинного текста (absolutsib, mr-66)">
   <div class="container">
     <div class="item"><b>с 2013</b><span>года производим торговое оборудование в Иркутске</span></div>
     <div class="item"><b><span class="fill">N</span> проектов</b><span>магазинов, аптек и островков в ТЦ. Число заполняет клиент</span></div>
@@ -177,7 +177,7 @@
 </section>
 
 <!-- Готовые комплекты -->
-<section class="section blk" data-tag="res" data-label="Новый блок: по результатам исследования. Готовые комплекты под нишу с ценой и сроком (westcom, ural-mart)">
+<section class="section blk" data-tag="res" data-label="Новый блок: по результатам исследования. Готовые комплекты под нишу с ценой и сроком (westcom, ural-mart)" id="kits">
   <div class="container">
     <div class="section-head">
       <div><span class="eyebrow">Комплексный заказ</span><h2>Готовые комплекты с ценой и сроком</h2><p>Точка входа для тех, кто открывается с нуля. Состав и цены комплектов в прототипе условные, формат показывает, как поднять средний чек.</p></div>
@@ -234,7 +234,7 @@
 </section>
 
 <!-- Доверие и гарантии -->
-<section class="section blk" data-tag="kp" data-label="Новый блок: по КП. Логотипы ТЦ-партнёров, сертификаты, юридические гарантии">
+<section class="section blk" data-tag="kp" data-label="Новый блок: по КП. Логотипы ТЦ-партнёров, сертификаты, юридические гарантии" id="trust">
   <div class="container">
     <div class="section-head">
       <div><span class="eyebrow">Доверие и гарантии</span><h2>Работаем по стандартам торговых центров</h2><p>Закрывает главный страх арендатора: «не согласуют» и «не успеем к открытию».</p></div>
@@ -265,7 +265,7 @@
 </section>
 
 <!-- Материалы -->
-<section class="section blk" data-tag="old" data-label="Существующий блок, переработан: плитка «Каталог цветов» стала блоком материалов">
+<section class="section blk" data-tag="old" data-label="Существующий блок, переработан: плитка «Каталог цветов» стала блоком материалов" id="materials">
   <div class="container">
     <div class="section-head">
       <div><span class="eyebrow">Материалы и цвета</span><h2>Из чего делаем</h2></div>
@@ -281,7 +281,7 @@
 </section>
 
 <!-- Отзывы -->
-<section class="section blk" data-tag="res" data-label="Новый блок: по результатам исследования. Отзывы и ссылка на Яндекс Карты (у ОТМ 0 отзывов, у лидеров до 179)">
+<section class="section blk" data-tag="res" data-label="Новый блок: по результатам исследования. Отзывы и ссылка на Яндекс Карты (у ОТМ 0 отзывов, у лидеров до 179)" id="reviews">
   <div class="container">
     <div class="section-head">
       <div><span class="eyebrow">Отзывы</span><h2>Что говорят владельцы магазинов и аптек</h2><p>Тексты отзывов в прототипе условные. Раздел заполняется отзывами из Яндекс Карт и благодарственными письмами.</p></div>
@@ -296,7 +296,7 @@
 </section>
 
 <!-- Форма расчёта -->
-<section class="section blk" data-tag="mix" data-label="Существующий блок (форма замера), переработан по КП: отправка плана или чертежа в 1 клик">
+<section class="section blk" data-tag="mix" data-label="Существующий блок (форма замера), переработан по КП: отправка плана или чертежа в 1 клик" id="calc">
   <div class="container">
     <div class="calc">
       <div>
@@ -330,7 +330,7 @@
 </section>
 
 <!-- FAQ -->
-<section class="section blk" data-tag="res" data-label="Новый блок: по результатам исследования. FAQ для закупщика, ни у одного местного конкурента нет">
+<section class="section blk" data-tag="res" data-label="Новый блок: по результатам исследования. FAQ для закупщика, ни у одного местного конкурента нет" id="faq">
   <div class="container">
     <div class="section-head">
       <div><span class="eyebrow">Вопросы закупщиков</span><h2>Что спрашивают перед заказом</h2></div>
@@ -397,7 +397,7 @@
       <div><h4>Решения</h4><a href="#niches">Аптеки</a><a href="#niches">Островки в ТЦ</a><a href="#niches">Одежда и обувь</a><a href="#niches">Продукты</a><a href="#niches">Салоны связи</a><a href="#niches">Офисы и клиники</a><a href="https://otm-group.ru/kukhni-na-zakaz/">Мебель для дома</a></div>
       <div><h4>Компания</h4><a href="#cases">Проекты</a><a href="#delivery">Доставка и монтаж</a><a href="#about">О компании</a><a href="#">Гарантии и договор</a><a href="#">Реквизиты</a><a href="#">Обработка персональных данных</a><a href="#">Публичная оферта</a></div>
     </div>
-    <div class="bottom"><span>ОТМ Групп, торгово-производственная компания, Иркутск. 2013 по 2026</span><span>Прототип. Цены «от», цифры с пометкой и тексты кейсов условные, заполняются данными клиента</span></div>
+    <div class="bottom"><span>ОТМ Групп, торгово-производственная компания, Иркутск. 2013 по 2026</span><span>Прототип. Цены «от», цифры с пометкой и тексты кейсов условные, заполняются данными клиента. <a href="../rationale.html" style="display:inline;padding:0;color:#fff;text-decoration:underline">Почему эти блоки: обоснование</a></span></div>
   </div>
 </footer>
 
@@ -425,6 +425,6 @@
   </form>
 </div>
 
-<script src="../assets/app.js?v=3"></script>
+<script src="../assets/app.js?v=4"></script>
 </body>
 </html>

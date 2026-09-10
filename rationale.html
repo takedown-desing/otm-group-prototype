@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Обоснование блоков прототипа ОТМ Групп</title>
+<meta name="description" content="Почему в прототип otm-group.ru добавлен каждый блок: данные исследования, скриншоты примеров у конкурентов и ссылки на их страницы.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%277%27 fill=%27%23E2573B%27/%3E%3Ctext x=%2716%27 y=%2722%27 font-size=%2716%27 font-family=%27Arial%27 font-weight=%27700%27 fill=%27white%27 text-anchor=%27middle%27%3EO%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/styles.css?v=4">
+<style>
+body{padding-top:0}
+.rat-top{background:var(--navy);color:#fff;padding:40px 0 32px}
+.rat-top .container{display:grid;grid-template-columns:1.3fr .7fr;gap:32px;align-items:end}
+.rat-top h1{color:#fff;font-size:clamp(28px,3.4vw,42px)}
+.rat-top p{color:#C7CFDB;max-width:720px}
+.rat-top .links{display:flex;gap:8px;flex-wrap:wrap}
+.rat-top .links a{border:1px solid rgba(255,255,255,.3);border-radius:10px;padding:9px 14px;font-weight:600;font-size:14px;color:#fff}
+.rat-top .links a:hover{background:rgba(255,255,255,.1)}
+.rat-layout{display:grid;grid-template-columns:250px 1fr;gap:32px;align-items:start;padding:32px 0 60px}
+.rat-nav{position:sticky;top:20px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:14px}
+.rat-nav h4{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:10px 0 6px}
+.rat-nav a{display:block;padding:6px 8px;border-radius:8px;font-size:13.5px;color:var(--ink-2)}
+.rat-nav a:hover{background:var(--surface-2);color:var(--ink)}
+.rat-nav .n{display:inline-block;width:20px;color:var(--muted);font-size:12px}
+.rat-sec{margin-bottom:44px}
+.rat-sec > h2{margin-bottom:6px}
+.rat-sec > .sub{color:var(--ink-2);margin-bottom:18px;max-width:820px}
+.rat{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px;margin-bottom:16px;display:grid;grid-template-columns:1fr 1.1fr;gap:24px}
+.rat .head{grid-column:1/-1;display:flex;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.rat .head h3{font-size:19px;flex:1;min-width:240px}
+.rat .num{font-family:var(--font-h);font-weight:800;color:var(--brand);font-size:20px;min-width:34px}
+.tagchip{display:inline-flex;align-items:center;border-radius:6px;padding:5px 9px;font-size:11.5px;font-weight:700;color:#fff;white-space:nowrap}
+.tagchip.old{background:var(--tag-old)}.tagchip.kp{background:var(--tag-kp)}.tagchip.res{background:var(--tag-res)}.tagchip.mix{background:linear-gradient(90deg,var(--tag-old) 0 50%,var(--tag-kp) 50% 100%)}
+.rat .why b,.rat .data b{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:6px}
+.rat .why p{font-size:14.5px;color:var(--ink-2);margin-bottom:12px}
+.rat .data ul{margin:0 0 12px;padding-left:18px;font-size:14px;color:var(--ink-2);display:grid;gap:4px}
+.rat .proto{font-size:13.5px}
+.rat .proto a{color:var(--brand);font-weight:600}
+.shots{display:grid;gap:12px}
+.shots figure{margin:0;background:var(--surface-2);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.shots figure a{display:block}
+.shots img{width:100%;height:auto;display:block}
+.shots figcaption{padding:10px 12px;font-size:12.5px;color:var(--ink-2);display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.shots figcaption a{color:var(--brand);font-weight:600;white-space:nowrap}
+.shots.two{grid-template-columns:1fr 1fr}
+.was-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.was{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.was img{width:100%;display:block;border-bottom:1px solid var(--line)}
+.was .b{padding:14px 16px}
+.was .b b{display:block;margin-bottom:6px}
+.was ul{margin:0;padding-left:18px;font-size:13.5px;color:var(--ink-2);display:grid;gap:3px}
+.src-table{width:100%;border-collapse:collapse;font-size:13.5px;background:#fff;border:1px solid var(--line)}
+.src-table th,.src-table td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.src-table th{background:var(--surface-2);font-family:var(--font-h);font-size:12.5px}
+.src-table a{color:var(--brand);font-weight:600}
+@media (max-width:1024px){.rat-layout{grid-template-columns:1fr}.rat-nav{position:static}.rat{grid-template-columns:1fr}.rat-top .container{grid-template-columns:1fr}}
+@media (max-width:720px){.was-grid,.shots.two{grid-template-columns:1fr}.rat{padding:16px}}
+</style>
+</head>
+<body>
+
+<div class="rat-top">
+  <div class="container">
+    <div>
+      <span class="eyebrow" style="color:#F0B8A9">otm-group.ru, прототип, сентябрь 2026</span>
+      <h1>Обоснование блоков: почему в прототипе именно эти блоки</h1>
+      <p style="margin-top:10px">Для каждого блока: зачем он B2B-клиенту, какие данные исследования его подтверждают, у кого из конкурентов это уже работает (скриншот и ссылка на страницу) и где посмотреть в прототипе. Все скриншоты сняты 10 сентября 2026.</p>
+    </div>
+    <div class="links">
+      <a href="index.html">Обзор</a>
+      <a href="prototypes/home.html">Главная</a>
+      <a href="prototypes/catalog.html">Каталог</a>
+      <a href="prototypes/product.html">Карточка товара</a>
+      <a href="https://github.com/takedown-desing/otm-group-prototype/blob/main/research/RESEARCH.md" target="_blank" rel="noopener">Полное исследование</a>
+    </div>
+  </div>
+</div>
+
+<div class="container rat-layout">
+  <aside class="rat-nav">
+    <h4>Разделы</h4>
+    <a href="#was">Как сайт выглядит сейчас</a>
+    <a href="#sources">Конкуренты и источники</a>
+    <h4>Главная</h4>
+    <a href="#h1"><span class="n">1</span>Шапка и мессенджеры</a>
+    <a href="#h2"><span class="n">2</span>Меню категорий</a>
+    <a href="#h3"><span class="n">3</span>Первый экран</a>
+    <a href="#h4"><span class="n">4</span>Полоса доверия с цифрами</a>
+    <a href="#h5"><span class="n">5</span>Каталог с ценами «от»</a>
+    <a href="#h6"><span class="n">6</span>Решения по нишам</a>
+    <a href="#h7"><span class="n">7</span>Готовые комплекты</a>
+    <a href="#h8"><span class="n">8</span>Проекты с фильтром</a>
+    <a href="#h9"><span class="n">9</span>Как мы работаем</a>
+    <a href="#h10"><span class="n">10</span>Доверие и гарантии</a>
+    <a href="#h11"><span class="n">11</span>Материалы и цвета</a>
+    <a href="#h12"><span class="n">12</span>Отзывы</a>
+    <a href="#h13"><span class="n">13</span>Форма с загрузкой плана</a>
+    <a href="#h14"><span class="n">14</span>FAQ закупщика</a>
+    <a href="#h15"><span class="n">15</span>О компании, контакты, подвал</a>
+    <a href="#h16"><span class="n">16</span>Мобильная панель</a>
+    <h4>Каталог</h4>
+    <a href="#c1"><span class="n">1</span>Хлебные крошки</a>
+    <a href="#c2"><span class="n">2</span>Подкатегории плашками</a>
+    <a href="#c3"><span class="n">3</span>Фильтр по параметрам</a>
+    <a href="#c4"><span class="n">4</span>Карточка с ценой и сроком</a>
+    <a href="#c5"><span class="n">5</span>Лид-магниты в сетке</a>
+    <a href="#c6"><span class="n">6</span>Таблица выбора</a>
+    <a href="#c7"><span class="n">7</span>Информация блоками</a>
+    <h4>Карточка товара</h4>
+    <a href="#p1"><span class="n">1</span>Галерея и статус</a>
+    <a href="#p2"><span class="n">2</span>Цвет и размеры</a>
+    <a href="#p3"><span class="n">3</span>Цена «от» и расчёт</a>
+    <a href="#p4"><span class="n">4</span>Характеристики</a>
+    <a href="#p5"><span class="n">5</span>Сроки и монтаж</a>
+    <a href="#p6"><span class="n">6</span>С этим покупают</a>
+    <a href="#p7"><span class="n">7</span>Файлы, кейсы, вопрос</a>
+    <h4>Прочее</h4>
+    <a href="#removed">Что убрали и переименовали</a>
+  </aside>
+
+  <main>
+
+    <!-- БЫЛО -->
+    <section class="rat-sec" id="was">
+      <h2>Как сайт выглядит сейчас</h2>
+      <p class="sub">Скриншоты текущего otm-group.ru, сняты заново с полной прокруткой, чтобы подгрузились все изображения. Полные версии для десктопа и телефона лежат в папке <a href="https://github.com/takedown-desing/otm-group-prototype/tree/main/research/screenshots" target="_blank" rel="noopener" style="color:var(--brand);font-weight:600">research/screenshots</a>.</p>
+      <div class="was-grid">
+        <div class="was"><a href="research/screenshots/otm_home_desktop.jpeg" target="_blank"><img src="research/screenshots/was-home-top.jpg" alt="Главная, первый экран и продукция"></a><div class="b"><b>Главная, верх</b><ul><li>Заголовок и подзаголовок дублируют title и description</li><li>Одна кнопка на первом экране ведёт в «Кухни и Шкафы», то есть уводит B2B-клиента</li><li>4 плитки без цен, у двух одинаковый подзаголовок</li></ul></div></div>
+        <div class="was"><a href="research/screenshots/otm_home_desktop.jpeg" target="_blank"><img src="research/screenshots/was-home-mid.jpg" alt="Главная, о компании, замер, карта"></a><div class="b"><b>Главная, низ</b><ul><li>«О компании» без цифр, ссылка «Подробнее» ведёт на демо-текст шаблона</li><li>Форма замера без возможности приложить план</li><li>Карта проезда не отрисовывается, адреса на сайте нет</li></ul></div></div>
+        <div class="was"><a href="research/screenshots/otm_catalog_desktop.jpeg" target="_blank"><img src="research/screenshots/was-catalog.jpg" alt="Листинг категории"></a><div class="b"><b>Листинг категории «Альфа»</b><ul><li>Нет хлебных крошек, фильтров и описания</li><li>Категории названы сериями, под которые нет спроса</li><li>На всех карточках «Цена по запросу»</li></ul></div></div>
+        <div class="was"><a href="research/screenshots/otm_product_desktop.jpeg" target="_blank"><img src="research/screenshots/was-product.jpg" alt="Карточка товара"></a><div class="b"><b>Карточка «Витрина А-016»</b><ul><li>Одно изображение, «Есть в наличии» у всех 208 изделий под заказ</li><li>«Цена по запросу» и «Добавить в корзину» без цены</li><li>Одинаковое описание на 206 карточках, нет сроков и допродаж</li></ul></div></div>
+      </div>
+    </section>
+
+    <!-- ИСТОЧНИКИ -->
+    <section class="rat-sec" id="sources">
+      <h2>Конкуренты и источники</h2>
+      <p class="sub">Кого сравнивали и почему. Отбор по выдаче Яндекса (регион Иркутск, 15 запросов) и Google, метрики из Arsenkin, Ahrefs и Keys.so. Ссылки ведут на страницы, с которых сняты скриншоты ниже.</p>
+      <div style="overflow-x:auto">
+        <table class="src-table">
+          <tr><th>Сайт</th><th>Кто это</th><th>В ТОП-10 Яндекса</th><th>ИКС</th><th>Отзывы Яндекс</th><th>Страницы со скриншотов</th></tr>
+          <tr><td><b>absolutsib.com</b></td><td>Местный производитель торговой мебели, ближайший аналог ОТМ</td><td>3 из 15</td><td>50</td><td>0</td><td><a href="https://www.absolutsib.com/" target="_blank" rel="noopener">Главная</a></td></tr>
+          <tr><td><b>vitrinairk.ru</b></td><td>Лидер выдачи, местный поставщик торгового и пищевого оборудования</td><td>9 из 15</td><td>180</td><td>2</td><td><a href="https://vitrinairk.ru/" target="_blank" rel="noopener">Главная</a>, <a href="https://vitrinairk.ru/catalog/torgovoe_oborudovanie/torgovye_prilavki/" target="_blank" rel="noopener">Листинг «Прилавки»</a></td></tr>
+          <tr><td><b>mto38.ru</b></td><td>Местный, «М-град», торговое оборудование и монтаж</td><td>2 из 15</td><td>10</td><td>0</td><td><a href="https://mto38.ru/" target="_blank" rel="noopener">Главная</a>, <a href="https://mto38.ru/product/obuvnicza-dlya-prihozhej/" target="_blank" rel="noopener">Карточка</a></td></tr>
+          <tr><td><b>otilos.ru</b></td><td>Федеральный производитель торговой мебели</td><td>3 из 15</td><td>60</td><td>0</td><td><a href="https://otilos.ru/catalog/universalnye-prilavki-i-vitriny/universalnye-vitriny/" target="_blank" rel="noopener">Листинг «Витрины»</a></td></tr>
+          <tr><td><b>westcom.ru</b></td><td>Федеральный лидер по мебели для аптек</td><td>2 из 15</td><td>450</td><td>18</td><td><a href="https://westcom.ru/torgovoe_oborudovanie/vitriny/vitriny_dlya_aptek/" target="_blank" rel="noopener">Листинг «Витрины для аптек»</a></td></tr>
+          <tr><td><b>sp-oborudovanie.ru</b></td><td>Федеральный производитель островков и павильонов для ТЦ</td><td>2 из 15</td><td>110</td><td>1</td><td><a href="https://sp-oborudovanie.ru/" target="_blank" rel="noopener">Главная</a></td></tr>
+          <tr><td><b>irkutsk.mr-66.ru</b></td><td>Федеральный поставщик стеллажей, поддомен Иркутска</td><td>6 из 15</td><td>130</td><td>1</td><td><a href="https://irkutsk.mr-66.ru/" target="_blank" rel="noopener">Главная</a></td></tr>
+          <tr><td><b>irkutsk.tdo.ru</b></td><td>Федеральный интернет-магазин оборудования</td><td>5 из 15</td><td>370</td><td>4</td><td><a href="https://irkutsk.tdo.ru/" target="_blank" rel="noopener">Главная</a></td></tr>
+          <tr><td><b>otm-group.ru</b></td><td>Наш сайт</td><td>5 из 15</td><td>30</td><td>0</td><td><a href="https://otm-group.ru/" target="_blank" rel="noopener">Главная</a></td></tr>
+        </table>
+      </div>
+    </section>
+
+    <!-- ГЛАВНАЯ -->
+    <section class="rat-sec" id="home">
+      <h2>Главная страница</h2>
+      <p class="sub">Блок 1 коммерческого предложения. Ниже каждый блок прототипа с обоснованием.</p>
+
+      <article class="rat" id="h1">
+        <div class="head"><span class="num">1</span><h3>Верхняя полоса, шапка с поиском, мессенджерами и переключателем «Для бизнеса / Для дома»</h3><span class="tagchip mix">Существующий + по КП</span></div>
+        <div>
+          <div class="why"><b>Зачем</b><p>Закупщик должен за секунду увидеть, что компания местная, работает с юрлицами и на связи в мессенджере. Сейчас в шапке только телефон и e-mail, а меню смешивает витрины с кухнями и шкафами-купе.</p></div>
+          <div class="data"><b>Данные</b><ul><li>Keys.so: ближайшие сайты по пересечению запросов у otm-group.ru это мебельные салоны (mebel-zakaz-irkutsk.ru, mebelevich.com, komandor-baikal.ru), а не производители торгового оборудования. Семантика смешана с B2C.</li><li>Мессенджер есть у mto38.ru (WhatsApp), sp-oborudovanie.ru (Telegram, MAX), tdo.ru (Telegram). У ОТМ нет.</li><li>Поиск по каталогу есть у vitrinairk.ru, otilos.ru, westcom.ru, tdo.ru.</li></ul></div>
+          <div class="proto">В прототипе: <a href="prototypes/home.html#top">шапка главной</a></div>
+        </div>
+        <div class="shots">
+          <figure><a href="research/screenshots/competitors/westcom-header-zamer-filter.jpg" target="_blank"><img src="research/screenshots/competitors/westcom-header-zamer-filter.jpg" alt="westcom.ru: шапка"></a><figcaption><span>westcom.ru: три телефона, «Вызов замерщика-консультанта», поиск, корзина, хлебные крошки</span><a href="https://westcom.ru/torgovoe_oborudovanie/vitriny/vitriny_dlya_aptek/" target="_blank" rel="noopener">открыть страницу</a></figcaption></figure>
+          <figure><a href="research/screenshots/competitors/spobor-header-send-project.jpg" target="_blank"><img src="research/screenshots/competitors/spobor-header-send-project.jpg" alt="sp-oborudovanie.ru: шапка"></a><figcaption><span>sp-oborudovanie.ru: «Отправьте свой проект на расчёт» прямо в шапке</span><a href="https://sp-oborudovanie.ru/" target="_blank" rel="noopener">открыть страницу</a></figcaption></figure>
+        </div>
+      </article>
+
+      <article class="rat" id="h2">
+        <div class="head"><span class="num">2</span><h3>Меню коммерческих категорий по типу изделия</h3><span class="tagchip kp">Новый: по КП</span></div>
+        <div>
+          <div class="why"><b>Зачем</b><p>Люди ищут «витрины», «прилавки», «стеллажи», «острова», а не серии «Альфа», «Омега», «Гранд». Меню должно повторять спрос, тогда посетитель находит нужное за один клик, а поиск получает страницы под запросы.</p></div>
+          <div class="data"><b>Данные</b><ul><li>Wordstat, Иркутск, показов в месяц: «витрина иркутск» 609, «стеллажи иркутск» 803, «торговое оборудование иркутск» 268, «прилавок иркутск» 30, «ресепшн иркутск» 26.</li><li>Запросов со словами «серия Альфа», «Омега», «Гранд» в Иркутске нет.</li><li>По «торговые витрины иркутск», «торговые стеллажи иркутск», «стойка ресепшн иркутск» сайта нет в ТОП-10, страниц под эти запросы нет.</li></ul></div>
+          <div class="proto">В прототипе: <a href="prototypes/home.html#top">меню под шапкой</a></div>
+        </div>
+        <div class="shots">
+          <figure><a href="research/screenshots/competitors/absolutsib-categories.jpg" target="_blank"><img src="research/screenshots/competitors/absolutsib-categories.jpg" alt="absolutsib.com: сетка категорий"></a><figcaption><span>absolutsib.com: 35 категорий с иконками по типу изделия</span><a href="https://www.absolutsib.com/" target="_blank" rel="noopener">открыть страницу</a></figcaption></figure>
+          <figure><a href="research/screenshots/competitors/mto38-hero-whatsapp.jpg" target="_blank"><img src="research/screenshots/competitors/mto38-hero-whatsapp.jpg" alt="mto38.ru: первый экран"></a><figcaption><span>mto38.ru: «Продажа и монтаж под ключ», кнопка WhatsApp на первом экране, 4 преимущества под ним</span><a href="https://mto38.ru/" target="_blank" rel="noopener">открыть страницу</a></figcaption></figure>
+        </div>
+      </article>
+
+      <article class="rat" id="h3">
+        <div class="head"><span class="num">3</span><h3>Первый экран: позиционирование, 3 B2B-буллета, форма «отправьте план помещения»</h3><span class="tagchip mix">Существующий + по КП</span></div>
+        <div>
+          <div class="why"><b>Зачем</b><p>Сейчас заголовок первого экрана повторяет title, а единственная кнопка ведёт в кухни. Нужно за 3 секунды ответить: что делаем, где, чем лучше, и дать способ отправить план. Буллеты закрывают три страха из КП: сроки открытия, согласование с ТЦ, размеры под помещение.</p></div>
+          <div class="data"><b>Данные</b><ul><li>Arsenkin: коммерциализация всех 15 проверенных запросов от 77% до 100%, выдача ждёт коммерческую страницу с ценой и формой, а не текст.</li><li>Форма или кнопка расчёта на первом экране: mr-66.ru («Получить консультацию»), mto38.ru (WhatsApp), sp-oborudovanie.ru («отправьте проект на расчёт»).</li></ul></div>
+          <div class="proto">В прототипе: <a href="prototypes/home.html#hero">первый экран</a></div>
+        </div>
+        <div class="shots">
+          <figure><a href="research/screenshots/competitors/mr66-hero-consult.jpg" target="_blank"><img src="research/screenshots/competitors/mr66-hero-consult.jpg" alt="mr-66.ru: первый экран с формой"></a><figcaption><span>irkutsk.mr-66.ru: форма «Получить консультацию» прямо на первом экране</span><a href="https://irkutsk.mr-66.ru/" target="_blank" rel="noopener">открыть страницу</a></figcaption></figure>
+        </div>
+      </article>
+
+      <article class="rat" id="h4">
+        <div class="head"><span class="num">4</span><h3>Полоса доверия с цифрами: год основания, проекты, срок, договор и НДС, гарантия</h3><span class="tagchip res">Новый: по исследованию</span></div>
+        <div>
+          <div class="why"><b>Зачем</b><p>Закупщик сравнивает подрядчиков по фактам, а не по прилагательным. На сайте есть только «работаем с 2013 года» внутри длинного текста. Цифры рядом с первым экраном читаются за секунду.</p></div>
+          <div class="data"><b>Данные</b><ul><li>absolutsib.com: «Почему более 300 клиентов выбрали нас», 6 пунктов с иконками.</li><li>sp-oborudovanie.ru: 8000 островных точек, 1500 бутиков, 21 год, 80 регионов.</li><li>mr-66.ru: «Мы работаем уже 12 лет», «более 1000 проектов».</li></ul></div>
+          <div class="proto">В прототипе: <a href="prototypes/home.html#trust-strip">полоса под первым экраном</a></div>
+        </div>
+        <div class="shots">
+          <figure><a href="research/screenshots/competitors/absolutsib-why-300.jpg" target="_blank"><img src="research/screenshots/competitors/absolutsib-why-300.jpg" alt="absolutsib.com: почему выбрали нас"></a><figcaption><span>absolutsib.com: «Почему более 300 клиентов выбрали нас»</span><a href="https://www.absolutsib.com/" target="_blank" rel="noopener">открыть страницу</a></figcaption></figure>
+          <figure><a href="research/screenshots/competitors/spobor-numbers.jpg" target="_blank"><img src="research/screenshots/competitors/spobor-numbers.jpg" alt="sp-oborudovanie.ru: цифры"></a><figcaption><span>sp-oborudovanie.ru: цифры компании крупно</span><a href="https://sp-oborudovanie.ru/" target="_blank" rel="noopener">открыть страницу</a></figcaption></figure>
+        </div>
+      </article>
+
+      <article class="rat" id="h5">
+        <div class="head"><span class="num">5</span><h3>Каталог на главной с ценой «от» и числом моделей</h3><span class="tagchip kp">Новый: по КП</span></div>
+        <div>
+          <div class="why"><b>Зачем</b><p>Главная причина ухода к конкурентам из КП: на сайте нет цен. Посетитель не понимает порядок сумм и уходит туда, где цена видна. Цена «от» рядом с категорией даёт ориентир без звонка.</p></div>
+          <div class="data"><b>Данные</b><ul><li>Обход сайта: 192 из 208 товаров «Цена по запросу», цена есть только у 16 позиций.</li><li>Цены показывают все проверенные конкуренты: vitrinairk.ru, otilos.ru («от 5 119 ₽»), mto38.ru, westcom.ru, tdo.ru («цена с НДС»).</li><li>Число моделей в прототипе взято из текущего каталога: витрины 101, прилавки 24, острова 21 и так далее.</li></ul></div>
+          <div class="proto">В прототипе: <a href="prototypes/home.html#catalog">каталог на главной</a></div>
+        </div>
+        <div class="shots">
+          <figure><a href="research/screenshots/competitors/otilos-popular-from.jpg" target="_blank"><img src="research/screenshots/competitors/otilos-popular-from.jpg" alt="otilos.ru: цены от"></a><figcaption><span>otilos.ru: подборка моделей с ценой «от»</span><a href="https://otilos.ru/catalog/universalnye-prilavki-i-vitriny/universalnye-vitriny/" target="_blank" rel="noopener">открыть страницу</a></figcaption></figure>
+          <figure><a href="research/screenshots/competitors/vitrinairk-hits-prices.jpg" target="_blank"><img src="research/screenshots/competitors/vitrinairk-hits-prices.jpg" alt="vitrinairk.ru: хиты с ценами"></a><figcaption><span>vitrinairk.ru: «Хиты продаж» с ценой и статусом «в наличии / под заказ» на главной</span><a href="https://vitrinairk.ru/" target="_blank" rel="noopener">открыть страницу</a></figcaption></figure>
+        </div>
+      </article>
+
+      <article class="rat" id="h6">
+        <div class="head"><span class="num">6</span><h3>Решения по нишам: аптеки, островки в ТЦ, одежда, продукты, салоны связи, офисы</h3><span class="tagchip res">Новый: по исследованию</span></div>
+        <div>
+          <div class="why"><b>Зачем</b><p>Владелец аптеки ищет «оборудование для аптеки», а не тип витрины. Плитка по нише ведёт его сразу к подборке изделий, комплектов и кейсов для его формата.</p></div>
+          <div class="data"><b>Данные</b><ul><li>Сайт уже на 6 месте по «витрины для аптеки иркутск» и на 3 по «торговые острова иркутск», но отдельных страниц под ниши нет.</li><li>Плитки по нишам есть у absolutsib.com (Мебель для аптек, Торговые острова, Оборудование для автозапчастей) и sp-oborudovanie.ru (Витрины, Островки, Павильоны, Ресепшн).</li></ul></div>
+          <div class="proto">В прототипе: <a href="prototypes/home.html#niches">решения по нишам</a></div>
+        </div>
+        <div class="shots">
+          <figure><a href="research/screenshots/competitors/absolutsib-niches.jpg" target="_blank"><img src="research/screenshots/competitors/absolutsib-niches.jpg" alt="absolutsib.com: направления"></a><figcaption><span>absolutsib.com: плитки «Мебель для аптек», «Торговые острова», «Стойки ресепшн», «Оборудование для магазинов автозапчастей»</span><a href="https://www.absolutsib.com/" target="_blank" rel="noopener">открыть страницу</a></figcaption></figure>
+          <figure><a href="research/screenshots/competitors/spobor-niches.jpg" target="_blank"><img src="research/screenshots/competitors/spobor-niches.jpg" alt="sp-oborudovanie.ru: типы изделий"></a><figcaption><span>sp-oborudovanie.ru: фото реальных объектов по типам</span><a href="https://sp-oborudovanie.ru/" target="_blank" rel="noopener">открыть страницу</a></figcaption></figure>
+        </div>
+      </article>
+
+      <article class="rat" id="h7">
+        <div class="head"><span class="num">7</span><h3>Готовые комплекты «Аптека», «Островок», «Одежда» с ценой и сроком</h3><span class="tagchip res">Новый: по исследованию</span></div>
+        <div>
+          <div class="why"><b>Зачем</b><p>Тот, кто открывается с нуля, не знает, сколько витрин ему нужно. Комплект отвечает на вопрос «сколько стоит оснастить аптеку 20 м²» и поднимает средний чек: заказывают всё сразу, а не одну витрину.</p></div>
+          <div class="data"><b>Данные</b><ul><li>Ни у одного местного конкурента готовых комплектов нет. Это точка отстройки.</li><li>Федеральный westcom.ru продаёт серии «Аптека» с фиксированными размерами и ценой за каждую позицию, ural-mart.ru продаёт «комплекты мебели для магазинов» (в выдаче по «витрины для аптеки иркутск», 4 место).</li><li>Состав и цены комплектов в прототипе условные и требуют прайса клиента.</li></ul></div>
+          <div class="proto">В прототипе: <a href="prototypes/home.html#kits">готовые комплекты</a></div>
+        </div>
+        <div class="shots">
+          <figure><a href="research/screenshots/competitors/westcom-cards-sizes.jpg" target="_blank"><img src="research/screenshots/competitors/westcom-cards-sizes.jpg" alt="westcom.ru: серия Аптека"></a><figcaption><span>westcom.ru: серия «Аптека», у каждой позиции высота, ширина, глубина, артикул и цена</span><a href="https://westcom.ru/torgovoe_oborudovanie/vitriny/vitriny_dlya_aptek/" target="_blank" rel="noopener">открыть страницу</a></figcaption></figure>
+        </div>
+      </article>
+
+      <article class="rat" id="h8">
+        <div class="head"><span class="num">8</span><h3>Выполненные проекты с фильтром по нишам: задача, материалы и сроки, результат</h3><span class="tagchip kp">Новый: по КП</span></div>
+        <div>
+          <div class="why"><b>Зачем</b><p>Кейс с фото объекта убеждает лучше любого текста: «такие же, как я, уже заказали и открылись». Фильтр по нишам показывает закупщику именно его формат. Сейчас раздел «Портфолио» на сайте заполнен демо-текстом шаблона.</p></div>
+          <div class="data"><b>Данные</b><ul><li>Проекты есть у всех местных конкурентов: absolutsib.com (табы по нишам: Обувные, Спорттовары, Торговые острова, Одежда, Аптеки, Стойки ресепшн), vitrinairk.ru (30 кейсов со ссылкой «Смотреть проект»), mto38.ru (фото по клиентам), sp-oborudovanie.ru (портфолио).</li><li>На otm-group.ru страница /portfolio/ содержит текст «Посмотрите созданные нами сайты» из демо-шаблона.</li></ul></div>
+          <div class="proto">В прототипе: <a href="prototypes/home.html#cases">проекты с фильтром</a></div>
+        </div>
+        <div class="shots two">
+          <figure><a href="research/screenshots/competitors/absolutsib-works-tabs.jpg" target="_blank"><img src="research/screenshots/competitors/absolutsib-works-tabs.jpg" alt="absolutsib.com: наши работы с табами"></a><figcaption><span>absolutsib.com: «Наши работы» с табами по нишам</span><a href="https://www.absolutsib.com/" target="_blank" rel="noopener">открыть</a></figcaption></figure>
+          <figure><a href="research/screenshots/competitors/vitrinairk-projects.jpg" target="_blank"><img src="research/screenshots/competitors/vitrinairk-projects.jpg" alt="vitrinairk.ru: проекты"></a><figcaption><span>vitrinairk.ru: кейс с фото и кнопкой «Смотреть проект»</span><a href="https://vitrinairk.ru/" target="_blank" rel="noopener">открыть</a></figcaption></figure>
+          <figure><a href="research/screenshots/competitors/mto38-projects.jpg" target="_blank"><img src="research/screenshots/competitors/mto38-projects.jpg" alt="mto38.ru: наши проекты"></a><figcaption><span>mto38.ru: «Наши проекты» с числом фото</span><a href="https://mto38.ru/" target="_blank" rel="noopener">открыть</a></figcaption></figure>
+          <figure><a href="research/screenshots/competitors/spobor-portfolio.jpg" target="_blank"><img src="research/screenshots/competitors/spobor-portfolio.jpg" alt="sp-oborudovanie.ru: портфолио"></a><figcaption><span>sp-oborudovanie.ru: портфолио островков в ТЦ</span><a href="https://sp-oborudovanie.ru/" target="_blank" rel="noopener">открыть</a></figcaption></figure>
+        </div>
+      </article>
+
+      <article class="rat" id="h9">
+        <div class="head"><span class="num">9</span><h3>Как мы работаем: 6 шагов со сроками</h3><span class="tagchip old">Существующий, переработан</span></div>
+        <div>
+          <div class="why"><b>Зачем</b><p>На сайте этапы описаны абзацем «Ведение заказа» внутри блока «О компании». Пошаговая схема с указанием сроков снимает вопрос «что будет после заявки» и подкрепляет обещание «3D-проект за 24 часа».</p></div>
+          <div class="data"><b>Данные</b><ul><li>sp-oborudovanie.ru: нумерованный список из 6 пунктов «Почему выбирают».</li><li>mr-66.ru: услуги плитками (проектирование под ключ, монтаж, сервис) с кнопками «Заказать».</li></ul></div>
+          <div class="proto">В прототипе: <a href="prototypes/home.html#delivery">как мы работаем</a></div>
+        </div>
+        <div class="shots">
+          <figure><a href="research/screenshots/competitors/mr66-services.jpg" target="_blank"><img src="research/screenshots/competitors/mr66-services.jpg" alt="mr-66.ru: услуги"></a><figcaption><span>irkutsk.mr-66.ru: этапы и услуги плитками с кнопкой «Заказать»</span><a href="https://irkutsk.mr-66.ru/" target="_blank" rel="noopener">открыть страницу</a></figcaption></figure>
+          <figure><a href="research/screenshots/competitors/spobor-why.jpg" target="_blank"><img src="research/screenshots/competitors/spobor-why.jpg" alt="sp-oborudovanie.ru: почему выбирают"></a><figcaption><span>sp-oborudovanie.ru: 6 пунктов, включая «работаем по вашим эскизам» и «гарантия»</span><a href="https://sp-oborudovanie.ru/" target="_blank" rel="noopener">открыть страницу</a></figcaption></figure>
+        </div>
+      </article>
+
+      <article class="rat" id="h10">
+        <div class="head"><span class="num">10</span><h3>Доверие и гарантии: логотипы ТЦ и клиентов, сертификаты, договор, гарантия</h3><span class="tagchip kp">Новый: по КП</span></div>
+        <div>
+          <div class="why"><b>Зачем</b><p>Арендатор ТЦ боится, что проект не согласуют, а владелец бизнеса боится сорванного срока. Логотипы ТЦ, с которыми уже работали, и пункты «фиксированный срок в договоре», «гарантия», «работаем с НДС» закрывают эти страхи до звонка.</p></div>
+          <div class="data"><b>Данные</b><ul><li>Логотипы клиентов: absolutsib.com («Среди наших клиентов»), vitrinairk.ru («Клиенты»), mr-66.ru («Нам доверяют»).</li><li>Гарантии и условия для юрлиц: tdo.ru («Рассрочка, кредит, лизинг», «Сервисное обслуживание»), mr-66.ru («рассрочка на 10 мес.», «бесплатный проект за 24 ч»).</li><li>Сертификаты в меню: sp-oborudovanie.ru. У ОТМ ничего из этого нет.</li></ul></div>
+          <div class="proto">В прототипе: <a href="prototypes/home.html#trust">доверие и гарантии</a></div>
+        </div>
+        <div class="shots two">
+          <figure><a href="research/screenshots/competitors/absolutsib-clients.jpg" target="_blank"><img src="research/screenshots/competitors/absolutsib-clients.jpg" alt="absolutsib.com: клиенты"></a><figcaption><span>absolutsib.com: логотипы клиентов</span><a href="https://www.absolutsib.com/" target="_blank" rel="noopener">открыть</a></figcaption></figure>
+          <figure><a href="research/screenshots/competitors/mr66-trust-logos.jpg" target="_blank"><img src="research/screenshots/competitors/mr66-trust-logos.jpg" alt="mr-66.ru: нам доверяют"></a><figcaption><span>irkutsk.mr-66.ru: «Нам доверяют»</span><a href="https://irkutsk.mr-66.ru/" target="_blank" rel="noopener">открыть</a></figcaption></figure>
+          <figure><a href="research/screenshots/competitors/mr66-advantages.jpg" target="_blank"><img src="research/screenshots/competitors/mr66-advantages.jpg" alt="mr-66.ru: преимущества"></a><figcaption><span>irkutsk.mr-66.ru: рассрочка, бесплатный проект за 24 часа, чертежи бесплатно</span><a href="https://irkutsk.mr-66.ru/" target="_blank" rel="noopener">открыть</a></figcaption></figure>
+          <figure><a href="research/screenshots/competitors/tdo-usp-leasing.jpg" target="_blank"><img src="research/screenshots/competitors/tdo-usp-leasing.jpg" alt="tdo.ru: рассрочка и лизинг"></a><figcaption><span>irkutsk.tdo.ru: «Рассрочка, кредит, лизинг», «Сервисное обслуживание»</span><a href="https://irkutsk.tdo.ru/" target="_blank" rel="noopener">открыть</a></figcaption></figure>
+        </div>
+      </article>
+
+      <article class="rat" id="h11">
+        <div class="head"><span class="num">11</span><h3>Материалы и цвета вместо плитки «Каталог цветов»</h3><span class="tagchip old">Существующий, переработан</span></div>
+        <div>
+          <div class="why"><b>Зачем</b><p>Плитка «Каталог цветов» на главной ничего не говорит о качестве. Блок «Из чего делаем» с толщиной ЛДСП, стеклом, профилем и подсветкой показывает производственную компетенцию и ведёт в каталог цветов по делу.</p></div>
+          <div class="data"><b>Данные</b><ul><li>westcom.ru выносит «Цвета ЛДСП и МДФ» в популярные категории листинга.</li><li>otilos.ru использует материал (ЛДСП 16 мм, профиль, стекло) как фильтр.</li><li>Keys.so: сайт ранжируется по запросам декоров «сосна лоредо», «дуб джаггер», «орех карини», то есть каталог цветов уже приносит трафик.</li></ul></div>
+          <div class="proto">В прототипе: <a href="prototypes/home.html#materials">материалы и цвета</a></div>
+        </div>
+        <div class="shots">
+          <figure><a href="research/screenshots/competitors/otilos-filter-prices.jpg" target="_blank"><img src="research/screenshots/competitors/otilos-filter-prices.jpg" alt="otilos.ru: фильтр по материалу"></a><figcaption><span>otilos.ru: фильтр «Материал» и «Цвет» в листинге</span><a href="https://otilos.ru/catalog/universalnye-prilavki-i-vitriny/universalnye-vitriny/" target="_blank" rel="noopener">открыть страницу</a></figcaption></figure>
+        </div>
+      </article>
+
+      <article class="rat" id="h12">
+        <div class="head"><span class="num">12</span><h3>Отзывы и ссылка на Яндекс Карты</h3><span class="tagchip res">Новый: по исследованию</span></div>
+        <div>
+          <div class="why"><b>Зачем</b><p>Закупщик проверяет подрядчика по отзывам на картах. Если на сайте есть блок отзывов и ссылка на карточку в Яндекс Картах, вы управляете этой проверкой, а не отдаёте её конкурентам в выдаче.</p></div>
+          <div class="data"><b>Данные</b><ul><li>Arsenkin iks, отзывов в Яндексе: otm-group.ru 0, vitrinairk.ru 2, westcom.ru 18, trapeza.ru 46, express-office.ru 179.</li><li>Блок отзывов на сайте: vitrinairk.ru (раздел «Отзывы»), westcom.ru (отзывы под листингом), mr-66.ru (пункт «Отзывы» в меню).</li><li>Тексты отзывов в прототипе условные, заполняются реальными.</li></ul></div>
+          <div class="proto">В прототипе: <a href="prototypes/home.html#reviews">отзывы</a></div>
+        </div>
+        <div class="shots">
+          <figure><a href="research/screenshots/competitors/westcom-reviews.jpg" target="_blank"><img src="research/screenshots/competitors/westcom-reviews.jpg" alt="westcom.ru: отзывы"></a><figcaption><span>westcom.ru: отзывы прямо под листингом категории</span><a href="https://westcom.ru/torgovoe_oborudovanie/vitriny/vitriny_dlya_aptek/" target="_blank" rel="noopener">открыть страницу</a></figcaption></figure>
+        </div>
+      </article>
+
+      <article class="rat" id="h13">
+        <div class="head"><span class="num">13</span><h3>Форма расчёта с загрузкой плана помещения или чертежа</h3><span class="tagchip mix">Существующий + по КП</span></div>
+        <div>
+          <div class="why"><b>Зачем</b><p>Сейчас на сайте форма «заявка на замер» из двух полей. B2B-клиент хочет скинуть план или чертёж и получить смету, не дожидаясь замера. Это и есть «сокращение цикла сделки» из КП: менеджер сразу уходит в расчёт.</p></div>
+          <div class="data"><b>Данные</b><ul><li>sp-oborudovanie.ru: «Отправьте свой проект на расчёт», «работаем по готовым чертежам или эскизам клиента».</li><li>mr-66.ru: кнопка «Заказать расчёт» у каждой категории и форма консультации на первом экране.</li><li>mto38.ru: «Мы перезвоним вам в течение 5 минут» как обещание скорости, в прототипе «ответим за 15 минут».</li></ul></div>
+          <div class="proto">В прототипе: <a href="prototypes/home.html#calc">форма расчёта</a></div>
+        </div>
+        <div class="shots">
+          <figure><a href="research/screenshots/competitors/mto38-callback-5min.jpg" target="_blank"><img src="research/screenshots/competitors/mto38-callback-5min.jpg" alt="mto38.ru: перезвоним за 5 минут"></a><figcaption><span>mto38.ru: «Затрудняетесь с выбором? Перезвоним в течение 5 минут»</span><a href="https://mto38.ru/" target="_blank" rel="noopener">открыть страницу</a></figcaption></figure>
+          <figure><a href="research/screenshots/competitors/spobor-consult-messengers.jpg" target="_blank"><img src="research/screenshots/competitors/spobor-consult-messengers.jpg" alt="sp-oborudovanie.ru: консультация и мессенджеры"></a><figcaption><span>sp-oborudovanie.ru: «Нужна консультация?» и кнопки «Написать в MAX», «Написать в Telegram»</span><a href="https://sp-oborudovanie.ru/" target="_blank" rel="noopener">открыть страницу</a></figcaption></figure>
+        </div>
+      </article>
+
+      <article class="rat" id="h14">
+        <div class="head"><span class="num">14</span><h3>FAQ для закупщика: цена, сроки, согласование с ТЦ, НДС, гарантия</h3><span class="tagchip res">Новый: по исследованию</span></div>
+        <div>
+          <div class="why"><b>Зачем</b><p>Те же вопросы менеджер отвечает по телефону каждый день. Ответы на сайте экономят звонок, а для поиска дают текст под запросы «торговое оборудование иркутск купить», «от производителя».</p></div>
+          <div class="data"><b>Данные</b><ul><li>Ни у одного местного конкурента FAQ нет. Из федеральных FAQ есть у irkutsk.mr-66.ru: 9 вопросов, включая «Проектируете ли под нестандартный объект» и «Можете показать реализованный проект».</li></ul></div>
+          <div class="proto">В прототипе: <a href="prototypes/home.html#faq">вопросы закупщиков</a></div>
+        </div>
+        <div class="shots">
+          <figure><a href="research/screenshots/competitors/mr66-faq.jpg" target="_blank"><img src="research/screenshots/competitors/mr66-faq.jpg" alt="mr-66.ru: FAQ"></a><figcaption><span>irkutsk.mr-66.ru: «Часто задаваемые вопросы»</span><a href="https://irkutsk.mr-66.ru/" target="_blank" rel="noopener">открыть страницу</a></figcaption></figure>
+        </div>
+      </article>
+
+      <article class="rat" id="h15">
+        <div class="head"><span class="num">15</span><h3>О компании с фактами, контакты с адресом, подвал с категориями</h3><span class="tagchip old">Существующий, переработан</span></div>
+        <div>
+          <div class="why"><b>Зачем</b><p>Блок «О компании» на сайте это три абзаца общих слов, а страница /about/ содержит демо-текст про Газпром. Короткий блок с фактами (год, цех, число моделей, география) и контакты с адресом и часами работы восстанавливают доверие.</p></div>
+          <div class="data"><b>Данные</b><ul><li>Адрес показывают в шапке и подвале mto38.ru, vitrinairk.ru, westcom.ru. На otm-group.ru адреса нет нигде, только пустая карта.</li><li>vitrinairk.ru рассказывает о компании через услуги: «Комплексное оснащение», «Участие в тендерах», «Обучение и консультации».</li></ul></div>
+          <div class="proto">В прототипе: <a href="prototypes/home.html#about">о компании</a>, <a href="prototypes/home.html#contacts">контакты</a></div>
+        </div>
+        <div class="shots">
+          <figure><a href="research/screenshots/competitors/vitrinairk-services.jpg" target="_blank"><img src="research/screenshots/competitors/vitrinairk-services.jpg" alt="vitrinairk.ru: мы предлагаем"></a><figcaption><span>vitrinairk.ru: «Мы предлагаем» вместо абстрактного текста о компании</span><a href="https://vitrinairk.ru/" target="_blank" rel="noopener">открыть страницу</a></figcaption></figure>
+          <figure><a href="research/screenshots/competitors/mto38-product-delivery-related.jpg" target="_blank"><img src="research/screenshots/competitors/mto38-product-delivery-related.jpg" alt="mto38.ru: оплата и доставка"></a><figcaption><span>mto38.ru: условия оплаты и доставки, адрес склада и выставочного зала</span><a href="https://mto38.ru/product/obuvnicza-dlya-prihozhej/" target="_blank" rel="noopener">открыть страницу</a></figcaption></figure>
+        </div>
+      </article>
+
+      <article class="rat" id="h16">
+        <div class="head"><span class="num">16</span><h3>Липкая мобильная панель: позвонить, написать, рассчитать</h3><span class="tagchip res">Новый: по исследованию</span></div>
+        <div>
+          <div class="why"><b>Зачем</b><p>На телефоне длинная страница прячет телефон и форму. Панель внизу экрана держит целевое действие под большим пальцем на любой глубине прокрутки.</p></div>
+          <div class="data"><b>Данные</b><ul><li>У проверенных конкурентов такой панели нет, это практика мобильных B2B-сайтов, а не заимствование.</li><li>PageSpeed мобильной версии текущего сайта 50 из 100, LCP 10,7 секунды: лёгкая вёрстка прототипа и панель без скриптов важны именно для мобильных.</li></ul></div>
+          <div class="proto">В прототипе: откройте <a href="prototypes/home.html">главную</a> с телефона или сузьте окно до 720 px</div>
+        </div>
+        <div class="shots">
+          <figure><a href="research/screenshots/otm_home_mobile.jpeg" target="_blank"><img src="research/screenshots/was-home-top.jpg" alt="Текущий сайт"></a><figcaption><span>Текущий сайт: на телефоне телефон и форма уходят за экран (полная мобильная версия по клику)</span><a href="https://otm-group.ru/" target="_blank" rel="noopener">открыть сайт</a></figcaption></figure>
+        </div>
+      </article>
+    </section>
+
+    <!-- КАТАЛОГ -->
+    <section class="rat-sec" id="catalog">
+      <h2>Каталог и листинг</h2>
+      <p class="sub">Блок 2 коммерческого предложения. Прототип сделан на примере категории «Витрины» (101 модель в текущем каталоге).</p>
+
+      <article class="rat" id="c1">
+        <div class="head"><span class="num">1</span><h3>Хлебные крошки</h3><span class="tagchip kp">Новый: по КП</span></div>
+        <div>
+          <div class="why"><b>Зачем</b><p>Посетитель из поиска попадает сразу в категорию и должен понимать, где он и куда подняться. Для поиска крошки передают структуру каталога. Сейчас на сайте их нет ни в листинге, ни в карточке.</p></div>
+          <div class="data"><b>Данные</b><ul><li>Крошки есть у всех 8 проверенных конкурентов.</li></ul></div>
+          <div class="proto">В прототипе: <a href="prototypes/catalog.html">верх листинга</a></div>
+        </div>
+        <div class="shots">
+          <figure><a href="research/screenshots/competitors/mto38-product-specs-whatsapp.jpg" target="_blank"><img src="research/screenshots/competitors/mto38-product-specs-whatsapp.jpg" alt="mto38.ru: крошки"></a><figcaption><span>mto38.ru: «Главная, Каталог, Misc, Обувница» над заголовком</span><a href="https://mto38.ru/product/obuvnicza-dlya-prihozhej/" target="_blank" rel="noopener">открыть страницу</a></figcaption></figure>
+        </div>
+      </article>
+
+      <article class="rat" id="c2">
+        <div class="head"><span class="num">2</span><h3>Подкатегории и ниши плашками над сеткой</h3><span class="tagchip res">Новый: по исследованию</span></div>
+        <div>
+          <div class="why"><b>Зачем</b><p>101 витрина в одной сетке это стена. Плашки «Из ЛДСП с накопителем», «Стекло и профиль», «Для аптек», «Для конфет» сужают выбор за один клик и не требуют сайдбара на телефоне.</p></div>
+          <div class="data"><b>Данные</b><ul><li>westcom.ru: «Популярные категории» плитками над листингом, включая «Готовые проекты», «Фото с объектов», «Вызов замерщика», «Рассчитать изделие».</li><li>absolutsib.com: сетка из 35 подкатегорий с иконками.</li></ul></div>
+          <div class="proto">В прототипе: <a href="prototypes/catalog.html">плашки под заголовком</a></div>
+        </div>
+        <div class="shots">
+          <figure><a href="research/screenshots/competitors/westcom-header-zamer-filter.jpg" target="_blank"><img src="research/screenshots/competitors/westcom-header-zamer-filter.jpg" alt="westcom.ru: популярные категории"></a><figcaption><span>westcom.ru: «Популярные категории» и «Подбор по параметрам» над сеткой</span><a href="https://westcom.ru/torgovoe_oborudovanie/vitriny/vitriny_dlya_aptek/" target="_blank" rel="noopener">открыть страницу</a></figcaption></figure>
+        </div>
+      </article>
+
+      <article class="rat" id="c3">
+        <div class="head"><span class="num">3</span><h3>Фильтр по назначению, типу, размерам, материалу, подсветке, цвету, цене и сроку</h3><span class="tagchip kp">Новый: по КП</span></div>
+        <div>
+          <div class="why"><b>Зачем</b><p>Закупщик подбирает под конкретное помещение: высота до 2000 мм, глубина 300, белый, с подсветкой. Без фильтра он звонит или уходит. Фильтр без перезагрузки страницы держит его в каталоге дольше, как и просит КП.</p></div>
+          <div class="data"><b>Данные</b><ul><li>vitrinairk.ru: фильтр по цене, виду товара, цвету, производителю, длине, ширине, высоте и серии.</li><li>westcom.ru: «Подбор по параметрам»: высота, ширина, глубина, цена.</li><li>otilos.ru: розничная цена, материал, цвет. mto38.ru: цена, бренд, материал, цвет.</li><li>На otm-group.ru только сортировка «по популярности / по цене».</li></ul></div>
+          <div class="proto">В прототипе: <a href="prototypes/catalog.html#filters">фильтр слева, на телефоне выезжает по кнопке</a></div>
+        </div>
+        <div class="shots two">
+          <figure><a href="research/screenshots/competitors/vitrinairk-filter-prices.jpg" target="_blank"><img src="research/screenshots/competitors/vitrinairk-filter-prices.jpg" alt="vitrinairk.ru: фильтр"></a><figcaption><span>vitrinairk.ru: фильтр по цене, виду, цвету, производителю и размерам</span><a href="https://vitrinairk.ru/catalog/torgovoe_oborudovanie/torgovye_prilavki/" target="_blank" rel="noopener">открыть</a></figcaption></figure>
+          <figure><a href="research/screenshots/competitors/otilos-filter-prices.jpg" target="_blank"><img src="research/screenshots/competitors/otilos-filter-prices.jpg" alt="otilos.ru: фильтр"></a><figcaption><span>otilos.ru: фильтр по цене, материалу и цвету, переключение вида сетки</span><a href="https://otilos.ru/catalog/universalnye-prilavki-i-vitriny/universalnye-vitriny/" target="_blank" rel="noopener">открыть</a></figcaption></figure>
+        </div>
+      </article>
+
+      <article class="rat" id="c4">
+        <div class="head"><span class="num">4</span><h3>Карточка в листинге: цена «от», размер, материал, подсветка, срок, две кнопки</h3><span class="tagchip kp">Новый: по КП</span></div>
+        <div>
+          <div class="why"><b>Зачем</b><p>Сейчас карточка это рендер, артикул и «Цена по запросу». Закупщик сравнивает модели по размеру и цене, не открывая каждую. Кнопка «Рассчитать по размерам» прямо в сетке даёт заявку без перехода в карточку.</p></div>
+          <div class="data"><b>Данные</b><ul><li>westcom.ru: в каждой карточке высота, ширина, глубина, артикул, цена и «Купить в 1 клик».</li><li>vitrinairk.ru: цена и статус «В наличии» или «Под заказ» в каждой карточке.</li><li>tdo.ru: цена с пометкой «с НДС», важной для юрлиц.</li></ul></div>
+          <div class="proto">В прототипе: <a href="prototypes/catalog.html#grid">сетка товаров</a></div>
+        </div>
+        <div class="shots two">
+          <figure><a href="research/screenshots/competitors/westcom-cards-sizes.jpg" target="_blank"><img src="research/screenshots/competitors/westcom-cards-sizes.jpg" alt="westcom.ru: карточки"></a><figcaption><span>westcom.ru: размеры и цена в карточке</span><a href="https://westcom.ru/torgovoe_oborudovanie/vitriny/vitriny_dlya_aptek/" target="_blank" rel="noopener">открыть</a></figcaption></figure>
+          <figure><a href="research/screenshots/competitors/tdo-cards-nds.jpg" target="_blank"><img src="research/screenshots/competitors/tdo-cards-nds.jpg" alt="tdo.ru: цена с НДС"></a><figcaption><span>irkutsk.tdo.ru: «Цена с НДС» под каждой позицией</span><a href="https://irkutsk.tdo.ru/" target="_blank" rel="noopener">открыть</a></figcaption></figure>
+        </div>
+      </article>
+
+      <article class="rat" id="c5">
+        <div class="head"><span class="num">5</span><h3>Лид-магниты внутри сетки: «Не нашли размер? Изготовим по чертежам» и «Комплект для аптеки»</h3><span class="tagchip kp">Новый: по КП</span></div>
+        <div>
+          <div class="why"><b>Зачем</b><p>Если посетитель дошёл до третьего ряда и не выбрал, ему нужен другой сценарий: отправить чертёж или взять готовый комплект. Баннер внутри сетки ловит его в момент сомнения.</p></div>
+          <div class="data"><b>Данные</b><ul><li>sp-oborudovanie.ru: «Отправьте свой проект на расчёт» и «Работаем по готовым чертежам или эскизам клиента» как главное предложение сайта.</li><li>mr-66.ru: кнопка «Заказать расчёт» рядом с «Подробнее» у каждой категории.</li></ul></div>
+          <div class="proto">В прототипе: <a href="prototypes/catalog.html#grid">баннеры в 4 и 8 ячейках сетки</a></div>
+        </div>
+        <div class="shots">
+          <figure><a href="research/screenshots/competitors/spobor-header-send-project.jpg" target="_blank"><img src="research/screenshots/competitors/spobor-header-send-project.jpg" alt="sp-oborudovanie.ru: отправьте проект"></a><figcaption><span>sp-oborudovanie.ru: «Отправьте свой проект на расчёт»</span><a href="https://sp-oborudovanie.ru/" target="_blank" rel="noopener">открыть страницу</a></figcaption></figure>
+        </div>
+      </article>
+
+      <article class="rat" id="c6">
+        <div class="head"><span class="num">6</span><h3>Таблица «Какая витрина подойдёт вашему магазину»</h3><span class="tagchip res">Новый: по исследованию</span></div>
+        <div>
+          <div class="why"><b>Зачем</b><p>КП просит вынести B2B-характеристики в карточку. Часть выбора (тип корпуса, для чего, цена от, срок) полезнее показать уровнем выше, чтобы посетитель открывал нужную карточку, а не первую попавшуюся.</p></div>
+          <div class="data"><b>Данные</b><ul><li>westcom.ru объясняет выбор мебели для аптеки текстом «Особенности выбора» под листингом. В прототипе то же самое сделано таблицей, которая читается за 10 секунд.</li></ul></div>
+          <div class="proto">В прототипе: <a href="prototypes/catalog.html#compare">таблица под сеткой</a></div>
+        </div>
+        <div class="shots">
+          <figure><a href="research/screenshots/competitors/westcom-category-text.jpg" target="_blank"><img src="research/screenshots/competitors/westcom-category-text.jpg" alt="westcom.ru: особенности выбора"></a><figcaption><span>westcom.ru: «Особенности выбора мебели для аптеки» текстом. У нас: таблица</span><a href="https://westcom.ru/torgovoe_oborudovanie/vitriny/vitriny_dlya_aptek/" target="_blank" rel="noopener">открыть страницу</a></figcaption></figure>
+        </div>
+      </article>
+
+      <article class="rat" id="c7">
+        <div class="head"><span class="num">7</span><h3>Информация о категории блоками и короткий FAQ</h3><span class="tagchip res">Новый: по исследованию</span></div>
+        <div>
+          <div class="why"><b>Зачем</b><p>Региональные коммерческие запросы («торговые витрины иркутск», «витрина иркутск торговое оборудование») требуют текста на странице категории. Но текстовое полотно не читают. Поэтому текст разбит на карточки: цех, ниши, сроки, доставка, материалы, что нужно для расчёта.</p></div>
+          <div class="data"><b>Данные</b><ul><li>Wordstat: «витрина иркутск торговое оборудование» 160 показов, «купить витрину иркутск» 147, «витрина магазина иркутск» 95.</li><li>Keys.so: сайт стоит на 39 месте по «витрина иркутск» (1279 показов) и на 27 по «витрина магазин иркутск» со страницей серии «Гранд». Нужна категория «Витрины» с описанием.</li></ul></div>
+          <div class="proto">В прототипе: <a href="prototypes/catalog.html#info">блоки о категории</a></div>
+        </div>
+        <div class="shots">
+          <figure><a href="research/screenshots/competitors/vitrinairk-services.jpg" target="_blank"><img src="research/screenshots/competitors/vitrinairk-services.jpg" alt="vitrinairk.ru: подача блоками"></a><figcaption><span>vitrinairk.ru: информация карточками с иконками вместо абзацев</span><a href="https://vitrinairk.ru/" target="_blank" rel="noopener">открыть страницу</a></figcaption></figure>
+        </div>
+      </article>
+    </section>
+
+    <!-- КАРТОЧКА -->
+    <section class="rat-sec" id="product">
+      <h2>Карточка товара</h2>
+      <p class="sub">Блок 3 коммерческого предложения. Прототип на примере «Витрина А-016».</p>
+
+      <article class="rat" id="p1">
+        <div class="head"><span class="num">1</span><h3>Галерея с ракурсами и фото на объекте, честный статус «под заказ, срок 7 дней»</h3><span class="tagchip old">Существующий, переработан</span></div>
+        <div>
+          <div class="why"><b>Зачем</b><p>Одно изображение не снимает сомнений по качеству. Фото изделия на реальном объекте и чертёж с размерами делают это лучше описания. Статус «Есть в наличии» на всех 208 карточках вводит в заблуждение: изделия делают под заказ, лучше показать срок.</p></div>
+          <div class="data"><b>Данные</b><ul><li>mto38.ru: фото и миниатюры в карточке, sp-oborudovanie.ru: фото с объектов в портфолио.</li><li>vitrinairk.ru: статусы «В наличии» и «Под заказ» разделены.</li></ul></div>
+          <div class="proto">В прототипе: <a href="prototypes/product.html">верх карточки</a></div>
+        </div>
+        <div class="shots">
+          <figure><a href="research/screenshots/competitors/mto38-product-specs-whatsapp.jpg" target="_blank"><img src="research/screenshots/competitors/mto38-product-specs-whatsapp.jpg" alt="mto38.ru: карточка"></a><figcaption><span>mto38.ru: фото, миниатюра, характеристики и кнопка «Задать вопрос о товаре в WhatsApp»</span><a href="https://mto38.ru/product/obuvnicza-dlya-prihozhej/" target="_blank" rel="noopener">открыть страницу</a></figcaption></figure>
+        </div>
+      </article>
+
+      <article class="rat" id="p2">
+        <div class="head"><span class="num">2</span><h3>Выбор цвета и типовых размеров, кнопка «Свой размер»</h3><span class="tagchip res">Новый: по исследованию</span></div>
+        <div>
+          <div class="why"><b>Зачем</b><p>На сайте выбирается только цвет. Ширина 300, 400, 500, 600, 900 мм закрывает большинство запросов без звонка, а «Свой размер» ведёт в форму расчёта. Это и есть «подвести к расчёту по своим размерам» из КП.</p></div>
+          <div class="data"><b>Данные</b><ul><li>otilos.ru: в каждой карточке варианты «Размер, мм (Ш×В×Г): 700×900×450, 800×900×500…» и цвета.</li><li>westcom.ru: серии с фиксированными размерами и артикулами.</li></ul></div>
+          <div class="proto">В прототипе: <a href="prototypes/product.html#options">цвет и ширина</a></div>
+        </div>
+        <div class="shots">
+          <figure><a href="research/screenshots/competitors/otilos-popular-from.jpg" target="_blank"><img src="research/screenshots/competitors/otilos-popular-from.jpg" alt="otilos.ru: модели"></a><figcaption><span>otilos.ru: модели одной серии в разных размерах и цветах</span><a href="https://otilos.ru/catalog/universalnye-prilavki-i-vitriny/universalnye-vitriny/" target="_blank" rel="noopener">открыть страницу</a></figcaption></figure>
+        </div>
+      </article>
+
+      <article class="rat" id="p3">
+        <div class="head"><span class="num">3</span><h3>Цена «от» за комплект, что входит, кнопка «Рассчитать по своим размерам», мессенджеры</h3><span class="tagchip kp">Новый: по КП</span></div>
+        <div>
+          <div class="why"><b>Зачем</b><p>«Цена по запросу» и «Добавить в корзину» без цены противоречат друг другу. Цена «от» с расшифровкой состава даёт порядок сумм, а главная кнопка ведёт к расчёту, а не в корзину, потому что почти каждое изделие делается под размер.</p></div>
+          <div class="data"><b>Данные</b><ul><li>На otm-group.ru реальная цена есть у 16 из 208 товаров (витрины серии К по 6 500 ₽).</li><li>tdo.ru: «Цена с НДС». westcom.ru: «Купить в 1 клик». mr-66.ru: «Заказать расчёт» как основное действие.</li></ul></div>
+          <div class="proto">В прототипе: <a href="prototypes/product.html#buy">блок цены</a></div>
+        </div>
+        <div class="shots">
+          <figure><a href="research/screenshots/competitors/tdo-cards-nds.jpg" target="_blank"><img src="research/screenshots/competitors/tdo-cards-nds.jpg" alt="tdo.ru: цена с НДС"></a><figcaption><span>irkutsk.tdo.ru: цена с уточнением «с НДС»</span><a href="https://irkutsk.tdo.ru/" target="_blank" rel="noopener">открыть страницу</a></figcaption></figure>
+        </div>
+      </article>
+
+      <article class="rat" id="p4">
+        <div class="head"><span class="num">4</span><h3>B2B-характеристики таблицей: нагрузка на полку, толщина ЛДСП и стекла, кромка, профиль, подсветка</h3><span class="tagchip kp">Новый: по КП</span></div>
+        <div>
+          <div class="why"><b>Зачем</b><p>Закупщик аптеки спрашивает про нагрузку на полку и класс эмиссии, арендатор ТЦ про подсветку и фриз. Сейчас эти данные размазаны по абзацу «Корпус: ламинированное ДСП 16мм». Таблица отвечает без звонка и подходит для согласования с ТЦ.</p></div>
+          <div class="data"><b>Данные</b><ul><li>mto38.ru: ширина, высота, окрас, материал списком в карточке.</li><li>westcom.ru: высота, ширина, глубина в каждой карточке серии.</li><li>Одинаковый текст «Дополнительно возможно» стоит на 206 карточках otm-group.ru.</li></ul></div>
+          <div class="proto">В прототипе: <a href="prototypes/product.html#specs">вкладка «Характеристики»</a></div>
+        </div>
+        <div class="shots">
+          <figure><a href="research/screenshots/competitors/westcom-cards-sizes.jpg" target="_blank"><img src="research/screenshots/competitors/westcom-cards-sizes.jpg" alt="westcom.ru: размеры"></a><figcaption><span>westcom.ru: размеры и артикул у каждой модели</span><a href="https://westcom.ru/torgovoe_oborudovanie/vitriny/vitriny_dlya_aptek/" target="_blank" rel="noopener">открыть страницу</a></figcaption></figure>
+        </div>
+      </article>
+
+      <article class="rat" id="p5">
+        <div class="head"><span class="num">5</span><h3>Сроки изготовления, доставка и монтаж по Иркутску и области</h3><span class="tagchip kp">Новый: по КП</span></div>
+        <div>
+          <div class="why"><b>Зачем</b><p>Вопрос «когда будет стоять» решает сделку не меньше цены. Шкала «смета 1 день, производство 7 дней, доставка 1 день, монтаж 2 часа» отвечает на него прямо в карточке.</p></div>
+          <div class="data"><b>Данные</b><ul><li>mto38.ru: блок «Оплата и доставка» внутри карточки.</li><li>tdo.ru: «Доставка по России», «Проектирование под ключ» с расстановкой и техпроектом.</li></ul></div>
+          <div class="proto">В прототипе: <a href="prototypes/product.html#delivery">шкала сроков</a></div>
+        </div>
+        <div class="shots">
+          <figure><a href="research/screenshots/competitors/tdo-design-turnkey.jpg" target="_blank"><img src="research/screenshots/competitors/tdo-design-turnkey.jpg" alt="tdo.ru: проектирование под ключ"></a><figcaption><span>irkutsk.tdo.ru: «Проектирование под ключ»: расстановка, технологический проект, дизайн-проект</span><a href="https://irkutsk.tdo.ru/" target="_blank" rel="noopener">открыть страницу</a></figcaption></figure>
+        </div>
+      </article>
+
+      <article class="rat" id="p6">
+        <div class="head"><span class="num">6</span><h3>«С этой витриной часто покупают» с пересчётом суммы</h3><span class="tagchip kp">Новый: по КП</span></div>
+        <div>
+          <div class="why"><b>Зачем</b><p>Рост среднего чека из КП: подсветка, замок, тумба, экономпанель, ценникодержатели. Чекбоксы с пересчётом суммы показывают итог сразу и превращают одну витрину в комплект.</p></div>
+          <div class="data"><b>Данные</b><ul><li>mto38.ru показывает «Другие товары» под карточкой, но без пересчёта. У остальных местных допродаж в карточке нет.</li></ul></div>
+          <div class="proto">В прототипе: <a href="prototypes/product.html#cross">блок допродаж</a></div>
+        </div>
+        <div class="shots">
+          <figure><a href="research/screenshots/competitors/mto38-product-delivery-related.jpg" target="_blank"><img src="research/screenshots/competitors/mto38-product-delivery-related.jpg" alt="mto38.ru: другие товары"></a><figcaption><span>mto38.ru: сопутствующие товары под описанием</span><a href="https://mto38.ru/product/obuvnicza-dlya-prihozhej/" target="_blank" rel="noopener">открыть страницу</a></figcaption></figure>
+        </div>
+      </article>
+
+      <article class="rat" id="p7">
+        <div class="head"><span class="num">7</span><h3>Файлы для согласования, кейсы с этим изделием, вопрос по товару, FAQ</h3><span class="tagchip res">Новый: по исследованию</span></div>
+        <div>
+          <div class="why"><b>Зачем</b><p>Закупщику нужно приложить чертёж и сертификат к согласованию с ТЦ или к тендеру. Кейсы в точке решения и кнопка «задать вопрос» сокращают цикл: человек не уходит искать ответ на другой сайт.</p></div>
+          <div class="data"><b>Данные</b><ul><li>westcom.ru: «Версия для печати» у категории. sp-oborudovanie.ru: раздел «Сертификаты» в меню.</li><li>mto38.ru: «Задать вопрос о товаре в WhatsApp» под фото. vitrinairk.ru: раздел проектов и «Участие в тендерах».</li></ul></div>
+          <div class="proto">В прототипе: <a href="prototypes/product.html#files">файлы</a>, <a href="prototypes/product.html#pcases">кейсы</a>, <a href="prototypes/product.html#qa">вопрос и FAQ</a></div>
+        </div>
+        <div class="shots">
+          <figure><a href="research/screenshots/competitors/mto38-product-specs-whatsapp.jpg" target="_blank"><img src="research/screenshots/competitors/mto38-product-specs-whatsapp.jpg" alt="mto38.ru: вопрос в WhatsApp"></a><figcaption><span>mto38.ru: «Задать вопрос о товаре в WhatsApp»</span><a href="https://mto38.ru/product/obuvnicza-dlya-prihozhej/" target="_blank" rel="noopener">открыть страницу</a></figcaption></figure>
+        </div>
+      </article>
+    </section>
+
+    <!-- УБРАЛИ -->
+    <section class="rat-sec" id="removed">
+      <h2>Что убрали и переименовали</h2>
+      <div style="overflow-x:auto">
+        <table class="src-table">
+          <tr><th>Было на сайте</th><th>Решение в прототипе</th><th>Почему</th></tr>
+          <tr><td>Кнопка «Кухни и Шкафы» на первом экране</td><td>Переключатель «Для дома» в шапке</td><td>Уводила B2B-клиента с первого экрана. Keys.so показывает смешение семантики с кухнями и шкафами</td></tr>
+          <tr><td>Категории «Серия Альфа», «Омега», «Гранд», «Дельта»</td><td>Витрины, прилавки, острова, стеллажи, ресепшн, тумбы</td><td>Wordstat: спроса на серии нет, спрос на типы изделий есть</td></tr>
+          <tr><td>Страницы /about/, /portfolio/, /blog/, /news/ с демо-текстом шаблона</td><td>Закрыть от индексации или заполнить; содержание перенесено в блоки «О компании» и «Проекты»</td><td>Демо-текст про Газпром и iPhone X разрушает доверие</td></tr>
+          <tr><td>«Есть в наличии» на всех 208 карточках</td><td>«Изготовление под заказ, срок N дней»</td><td>Честный статус, который совпадает с реальностью и подчёркивает производство</td></tr>
+          <tr><td>Одинаковое описание «Дополнительно возможно» на 206 карточках</td><td>Таблица характеристик и блоки «Что можно изменить»</td><td>Одинаковый текст не даёт ни пользователю, ни поиску новой информации</td></tr>
+          <tr><td>Пустые разделы каталога (Каталог цветов, Кухни, ЛДСП, Мебель для дома, Раскрой, Шкафы-купе, Витрины, Торговое оборудование)</td><td>Вынесены в «Для дома» или объединены с рабочими категориями</td><td>8 из 25 разделов не содержат товаров</td></tr>
+        </table>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<footer class="footer" style="padding-bottom:40px">
+  <div class="container">
+    <div class="bottom" style="border-top:0;margin-top:0;padding-top:0"><span>Прототип и исследование для otm-group.ru, сентябрь 2026. Скриншоты конкурентов сняты 10 сентября 2026 и приведены как примеры блоков</span><a href="index.html">Обзор проекта</a></div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;700;800&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%277%27 fill=%27%23E2573B%27/%3E%3Ctext x=%2716%27 y=%2722%27 font-size=%2716%27 font-family=%27Arial%27 font-weight=%27700%27 fill=%27white%27 text-anchor=%27middle%27%3EO%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="../assets/styles.css?v=3">
+<link rel="stylesheet" href="../assets/styles.css?v=4">
 </head>
 <body>
 
@@ -127,7 +127,7 @@
         </div>
       </div>
 
-      <div class="opts blk blk-inline" data-tag="res" data-label="Новый блок: по результатам исследования. Выбор цвета и типовых размеров (otilos)">
+      <div class="opts blk blk-inline" id="options" data-tag="res" data-label="Новый блок: по результатам исследования. Выбор цвета и типовых размеров (otilos)">
         <div class="lbl"><span>Цвет корпуса: <b data-color-name style="color:var(--ink)">Белый</b></span><a href="https://otm-group.ru/catalog/ldsp/">все 40 декоров ЛДСП</a></div>
         <div class="swatches">
           <span class="swatch active" title="Белый" style="background:#F3F1EC"></span><span class="swatch" title="Венге" style="background:#3B2A21"></span><span class="swatch" title="Вишня" style="background:#8B4A2B"></span><span class="swatch" title="Дуб Кальяри" style="background:#C8A46A"></span><span class="swatch" title="Орех" style="background:#7A4A2E"></span><span class="swatch" title="Титан" style="background:#B9B5AE"></span><span class="swatch" title="Ясень шимо светлый" style="background:#D9C4A3"></span><span class="swatch" title="Ясень шимо тёмный" style="background:#6E5A45"></span>
@@ -136,7 +136,7 @@
         <div class="sizes"><button class="active">300</button><button>400</button><button>500</button><button>600</button><button>900</button><button class="custom">Свой размер</button></div>
       </div>
 
-      <div class="buy blk" data-tag="kp" data-label="Новый блок: по КП. Цена «от» и кнопка «Рассчитать по своим размерам» вместо «Цена по запросу»">
+      <div class="buy blk" id="buy" data-tag="kp" data-label="Новый блок: по КП. Цена «от» и кнопка «Рассчитать по своим размерам» вместо «Цена по запросу»">
         <div class="p-price"><div class="price" data-base-price="7900">от 7 900 ₽<small>за комплект в типовом размере, цена условная</small></div><span class="chip brand">Смета за 1 день</span></div>
         <div class="incl"><span>Корпус, 2 стеклянные полки, полка ЛДСП, фурнитура</span><span>Упаковка, доставка по Иркутску отдельно от 1 200 ₽</span><span>3D-проект расстановки бесплатно при заказе от 5 витрин</span></div>
         <div class="btns">
@@ -166,7 +166,7 @@
   </section>
 
   <!-- Табы: характеристики, состав, описание, файлы -->
-  <section class="section blk" data-tag="kp" data-label="Новый блок: по КП. B2B-характеристики таблицей: нагрузка, толщина ЛДСП и стекла, профиль, подсветка">
+  <section class="section blk" data-tag="kp" data-label="Новый блок: по КП. B2B-характеристики таблицей: нагрузка, толщина ЛДСП и стекла, профиль, подсветка" id="specs">
     <div class="p-tabs">
       <button class="active" data-panel="p-spec">Характеристики</button>
       <button data-panel="p-kit">Состав комплекта</button>
@@ -206,13 +206,26 @@
       </table>
     </div>
     <div class="p-panel" id="p-desc">
-      <div class="seo-text">
-        <p>Пристенная витрина из ЛДСП с остеклённой верхней частью и закрытым накопителем внизу. Подходит для аптек, магазинов косметики, салонов связи и островков в торговых центрах. Производим в Иркутске, стандартный размер или под ваше помещение.</p>
-        <h3>Что можно изменить</h3>
-        <p>Размеры и цвет, число и материал полок, подсветку полок и фриза, замок на дверцы накопителя, заднюю стенку из зеркала или ЛДСП. При заказе от 5 витрин делаем 3D-проект расстановки в вашем зале бесплатно.</p>
+      <div class="info-grid cols-3">
+        <div class="info">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M4 12h16M12 12v9"/></svg></div>
+          <h3>Что это за витрина</h3>
+          <ul><li>Пристенная, остеклённый верх и закрытый накопитель внизу</li><li>Запас товара хранится внутри, дверцы можно закрыть на замок</li><li>Производим в Иркутске, стандартный размер или под ваше помещение</li></ul>
+        </div>
+        <div class="info">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l7-4 7 4v14"/><path d="M9 21v-6h6v6"/></svg></div>
+          <h3>Кому подходит</h3>
+          <ul><li>Аптеки: моющиеся поверхности, материалы класса Е1</li><li>Косметика и подарки: подсветка полок по опции</li><li>Островки в ТЦ: фриз и свет по требованиям арендодателя</li></ul>
+        </div>
+        <div class="info accent">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M16.5 3.5a2 2 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></div>
+          <h3>Что можно изменить</h3>
+          <ul><li>Размеры и любой из 40 декоров ЛДСП</li><li>Число полок, стекло или ЛДСП</li><li>LED-подсветка полок и фриза</li><li>Замок, зеркальная задняя стенка</li></ul>
+          <p class="small muted" style="margin:0">При заказе от 5 витрин 3D-проект расстановки бесплатно</p>
+        </div>
       </div>
     </div>
-    <div class="p-panel" id="p-files">
+    <div class="p-panel" id="p-files"><a id="files"></a>
       <div class="files blk blk-inline" data-tag="res" data-label="Новый блок: по результатам исследования. Файлы для согласования с ТЦ">
         <a class="file" href="#"><span class="ic">PDF</span><div><b>Чертёж с размерами</b><span>для согласования с арендодателем</span></div></a>
         <a class="file" href="#"><span class="ic">PDF</span><div><b>Паспорт изделия</b><span>материалы, нагрузка, уход</span></div></a>
@@ -222,7 +235,7 @@
   </section>
 
   <!-- С этим товаром покупают -->
-  <section class="section blk" data-tag="kp" data-label="Новый блок: по КП. «С этим товаром часто покупают»: экономпанель, подсветка, фурнитура">
+  <section class="section blk" data-tag="kp" data-label="Новый блок: по КП. «С этим товаром часто покупают»: экономпанель, подсветка, фурнитура" id="cross">
     <div class="section-head"><div><span class="eyebrow">Допродажи</span><h2>С этой витриной часто покупают</h2><p>Отметьте нужное, сумма пересчитается. Цены дополнений в прототипе условные.</p></div></div>
     <div class="cross-grid">
       <div class="cross"><div class="pic"><span class="ph">💡</span></div><b>LED-подсветка полок, 2 шт.</b><span class="muted small">12 В, блок питания, тёплый или холодный свет</span><div class="p"><span class="price" style="font-size:16px">1 900 ₽</span><label><input type="checkbox" data-price="1900" checked> добавить</label></div></div>
@@ -235,7 +248,7 @@
   </section>
 
   <!-- Где стоит -->
-  <section class="section blk" data-tag="res" data-label="Новый блок: по результатам исследования. Кейсы с этим изделием (vitrinairk, absolutsib)">
+  <section class="section blk" data-tag="res" data-label="Новый блок: по результатам исследования. Кейсы с этим изделием (vitrinairk, absolutsib)" id="pcases">
     <div class="section-head"><div><span class="eyebrow">Где стоит эта модель</span><h2>Проекты с витринами серии Альфа</h2><p>Фото объектов и тексты заполняются реальными проектами клиента.</p></div><a class="btn btn-outline" href="home.html#cases">Все проекты</a></div>
     <div class="mini-cases">
       <a class="mini-case" href="home.html#cases"><div class="pic"><img src="../assets/img/vitrina-a-012.jpg" alt=""></div><div class="b"><b>Аптека 18 м², Иркутск</b><span>8 витрин, 12 дней, монтаж 1 день</span></div></a>
@@ -245,7 +258,7 @@
   </section>
 
   <!-- Вопрос по товару + FAQ -->
-  <section class="section blk" data-tag="res" data-label="Новый блок: по результатам исследования. Вопрос по товару и FAQ (absolutsib, mto38)">
+  <section class="section blk" data-tag="res" data-label="Новый блок: по результатам исследования. Вопрос по товару и FAQ (absolutsib, mto38)" id="qa">
     <div class="qa">
       <form class="card">
         <h3>Вопрос по этой витрине</h3>
@@ -289,7 +302,7 @@
       <div><h4>Решения</h4><a href="home.html#niches">Аптеки</a><a href="home.html#niches">Островки в ТЦ</a><a href="home.html#niches">Одежда и обувь</a><a href="home.html#niches">Продукты</a><a href="home.html#niches">Салоны связи</a><a href="home.html#niches">Офисы и клиники</a><a href="https://otm-group.ru/kukhni-na-zakaz/">Мебель для дома</a></div>
       <div><h4>Компания</h4><a href="home.html#cases">Проекты</a><a href="home.html#delivery">Доставка и монтаж</a><a href="home.html#about">О компании</a><a href="#">Гарантии и договор</a><a href="#">Реквизиты</a><a href="#">Обработка персональных данных</a><a href="#">Публичная оферта</a></div>
     </div>
-    <div class="bottom"><span>ОТМ Групп, торгово-производственная компания, Иркутск. 2013 по 2026</span><span>Прототип. Цены «от» и цены дополнений условные</span></div>
+    <div class="bottom"><span>ОТМ Групп, торгово-производственная компания, Иркутск. 2013 по 2026</span><span>Прототип. Цены «от» и цены дополнений условные. <a href="../rationale.html" style="display:inline;padding:0;color:#fff;text-decoration:underline">Почему эти блоки: обоснование</a></span></div>
   </div>
 </footer>
 
@@ -315,6 +328,6 @@
   </form>
 </div>
 
-<script src="../assets/app.js?v=3"></script>
+<script src="../assets/app.js?v=4"></script>
 </body>
 </html>

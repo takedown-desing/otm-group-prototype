@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;700;800&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%277%27 fill=%27%23E2573B%27/%3E%3Ctext x=%2716%27 y=%2722%27 font-size=%2716%27 font-family=%27Arial%27 font-weight=%27700%27 fill=%27white%27 text-anchor=%27middle%27%3EO%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="../assets/styles.css?v=3">
+<link rel="stylesheet" href="../assets/styles.css?v=4">
 </head>
 <body>
 
@@ -123,7 +123,7 @@
   <div class="catalog-layout">
 
     <!-- Фильтр -->
-    <aside class="filters blk" data-tag="kp" data-label="Новый блок: по КП. B2B-фильтр по назначению, материалу, размерам, цене">
+    <aside class="filters blk" id="filters" data-tag="kp" data-label="Новый блок: по КП. B2B-фильтр по назначению, материалу, размерам, цене">
       <div class="f-head"><h3>Подбор по параметрам</h3><a href="#">Сбросить</a></div>
       <div class="fgroup"><b>Назначение</b>
         <label><input type="checkbox" checked> Аптека <small>24</small></label>
@@ -184,7 +184,7 @@
       <div class="active-filters"><span class="chip">Аптека <b>✕</b></span><span class="chip">Высота до 2000 мм <b>✕</b></span><span class="chip" style="background:transparent;color:var(--muted)">Найдено 24 модели</span></div>
 
       <!-- Сетка товаров -->
-      <div class="prod-grid blk" data-tag="kp" data-label="Новый: по КП. Карточка с ценой «от», размером, материалом и сроком вместо «Цена по запросу»">
+      <div class="prod-grid blk" id="grid" data-tag="kp" data-label="Новый: по КП. Карточка с ценой «от», размером, материалом и сроком вместо «Цена по запросу»">
         <article class="prod"><div class="pic"><div class="badges"><span class="chip ok">Хит</span></div><img src="../assets/img/vitrina-a-016.jpg" alt="Витрина А-016"><div class="colors"><i style="background:#F3F1EC"></i><i style="background:#3B2A21"></i><i style="background:#C8A46A"></i><i style="background:#B9B5AE"></i></div></div><h3><a href="product.html">Витрина А-016 остеклённая с накопителем</a></h3><div class="art">Арт. A-016, серия Альфа, 8 цветов ЛДСП</div><div class="specs"><span><b>Размер:</b> 300 × 2000 × 900 мм</span><span><b>Корпус:</b> ЛДСП 16 мм, стекло 5 мм, 2 полки</span><span><b>Подсветка:</b> LED-полки, опция</span></div><div class="p-row"><div class="price">от 7 900 ₽<small>за комплект</small></div><span class="term">срок 7 дней</span></div><div class="actions"><a class="btn btn-primary" href="#" data-calc data-calc-title="Рассчитать по своим размерам" data-calc-sub="Укажите размеры или приложите план" data-calc-product="Витрина А-016">Рассчитать по размерам</a><a class="btn btn-outline" href="#" title="В корзину"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6"/><circle cx="10" cy="20" r="1"/><circle cx="17" cy="20" r="1"/></svg></a></div></article>
 
         <article class="prod"><div class="pic"><div class="badges"><span class="chip ok">Для аптек</span></div><img src="../assets/img/vitrina-a-012.jpg" alt="Витрина А-012"><div class="colors"><i style="background:#F3F1EC"></i><i style="background:#3B2A21"></i><i style="background:#8B4A2B"></i></div></div><h3><a href="product.html">Витрина А-012 пристенная 900 мм</a></h3><div class="art">Арт. A-012, серия Альфа</div><div class="specs"><span><b>Размер:</b> 900 × 2000 × 300 мм</span><span><b>Корпус:</b> ЛДСП 16 мм, стекло 5 мм, 4 полки</span><span><b>Подсветка:</b> LED-полки в комплекте</span></div><div class="p-row"><div class="price">от 12 400 ₽<small>за комплект</small></div><span class="term">срок 7 дней</span></div><div class="actions"><a class="btn btn-primary" href="#" data-calc data-calc-product="Витрина А-012" data-calc-title="Рассчитать по своим размерам">Рассчитать по размерам</a><a class="btn btn-outline" href="#" title="В корзину"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6"/><circle cx="10" cy="20" r="1"/><circle cx="17" cy="20" r="1"/></svg></a></div></article>
@@ -226,7 +226,7 @@
   </div>
 
   <!-- Сравнение типов -->
-  <section class="section blk" data-tag="res" data-label="Новый блок: по результатам исследования. Таблица выбора типа витрины до перехода в карточку">
+  <section class="section blk" data-tag="res" data-label="Новый блок: по результатам исследования. Таблица выбора типа витрины до перехода в карточку" id="compare">
     <div class="section-head"><div><span class="eyebrow">Как выбрать</span><h2>Какая витрина подойдёт вашему магазину</h2></div></div>
     <div style="overflow-x:auto">
       <table class="cmp-table">
@@ -239,15 +239,46 @@
     </div>
   </section>
 
-  <!-- Текст категории -->
-  <section class="section blk" data-tag="res" data-label="Новый блок: по результатам исследования. Текст категории под региональные коммерческие запросы">
-    <div class="seo-text">
-      <h2>Торговые витрины в Иркутске от производителя</h2>
-      <p>Производим витрины для магазинов, аптек, салонов связи и островков в торговых центрах Иркутска с 2013 года. Собственный цех: раскрой ЛДСП, обработка кромки, резка и полировка стекла, сборка и упаковка. Любую модель из каталога изготовим по вашим размерам, в любом из 40 декоров ЛДСП, с подсветкой или без.</p>
-      <h3>Сроки и доставка</h3>
-      <p>Типовые витрины делаем за 7 рабочих дней, с подсветкой и нестандартными размерами за 10 до 14 дней. Доставляем по Иркутску и области своим транспортом, в другие регионы отгружаем транспортной компанией. Монтаж на объекте, в том числе ночью в ТЦ.</p>
-      <h3>Что нужно для расчёта</h3>
-      <p>Размеры помещения или фото плана от руки, желаемое число витрин и требования арендодателя, если открываетесь в ТЦ. Смету и 3D-проект присылаем за 1 рабочий день, замер по Иркутску бесплатно.</p>
+  <!-- Текст категории в виде информативных блоков -->
+  <section class="section blk" data-tag="res" data-label="Новый блок: по результатам исследования. Информация о категории блоками вместо текстового полотна" id="info">
+    <div class="section-head"><div><span class="eyebrow">О категории</span><h2>Торговые витрины в Иркутске от производителя</h2><p>Всё, что закупщик хочет знать до звонка: кто делает, из чего, за сколько дней и что нужно для расчёта.</p></div></div>
+    <div class="info-grid">
+      <div class="info">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l7-4 7 4v14"/><path d="M9 21v-6h6v6"/></svg></div>
+        <h3>Собственный цех с 2013 года</h3>
+        <ul><li>Раскрой ЛДСП, обработка кромки</li><li>Резка и полировка стекла</li><li>Сборка, упаковка, контроль перед отгрузкой</li></ul>
+      </div>
+      <div class="info">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M8 4v16"/></svg></div>
+        <h3>Для каких магазинов</h3>
+        <ul><li>Аптеки и оптики</li><li>Салоны связи и электроника</li><li>Косметика, ювелирные, подарки</li><li>Островки в торговых центрах</li></ul>
+      </div>
+      <div class="info">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+        <h3>Сроки</h3>
+        <div class="kv"><span>Типовая витрина</span><b>7 рабочих дней</b></div>
+        <div class="kv"><span>С подсветкой, нестандарт</span><b>10 до 14 дней</b></div>
+        <div class="kv"><span>Смета и 3D-проект</span><b>1 рабочий день</b></div>
+      </div>
+      <div class="info">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h11v10H3zM14 10h4l3 3v4h-7z"/><circle cx="7" cy="18" r="1.5"/><circle cx="17" cy="18" r="1.5"/></svg></div>
+        <h3>Доставка и монтаж</h3>
+        <div class="kv"><span>Иркутск</span><b>свой транспорт, от 1 200 ₽</b></div>
+        <div class="kv"><span>Область</span><b>по тарифу</b></div>
+        <div class="kv"><span>Другие регионы</span><b>транспортной компанией</b></div>
+        <div class="kv"><span>Монтаж</span><b>на объекте, ночью в ТЦ</b></div>
+      </div>
+      <div class="info">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M4 9h16M9 9v11"/></svg></div>
+        <h3>Материалы и цвета</h3>
+        <ul><li>ЛДСП 16 и 25 мм, более 40 декоров</li><li>Стекло 5 мм, закалённое 6 мм</li><li>Алюминиевый профиль, LED-подсветка</li></ul>
+      </div>
+      <div class="info accent">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 16V4m0 0 4 4m-4-4-4 4"/><path d="M4 16v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3"/></svg></div>
+        <h3>Что нужно для расчёта</h3>
+        <ul><li>Размеры помещения или фото плана от руки</li><li>Сколько витрин и для какого товара</li><li>Требования ТЦ, если открываетесь в центре</li></ul>
+        <a class="btn btn-primary btn-sm" href="#" data-calc data-calc-title="Рассчитать витрины по плану" data-calc-sub="Приложите план зала, подберём модели и посчитаем комплект">Отправить план на расчёт</a>
+      </div>
     </div>
   </section>
 
@@ -274,7 +305,7 @@
       <div><h4>Решения</h4><a href="home.html#niches">Аптеки</a><a href="home.html#niches">Островки в ТЦ</a><a href="home.html#niches">Одежда и обувь</a><a href="home.html#niches">Продукты</a><a href="home.html#niches">Салоны связи</a><a href="home.html#niches">Офисы и клиники</a><a href="https://otm-group.ru/kukhni-na-zakaz/">Мебель для дома</a></div>
       <div><h4>Компания</h4><a href="home.html#cases">Проекты</a><a href="home.html#delivery">Доставка и монтаж</a><a href="home.html#about">О компании</a><a href="#">Гарантии и договор</a><a href="#">Реквизиты</a><a href="#">Обработка персональных данных</a><a href="#">Публичная оферта</a></div>
     </div>
-    <div class="bottom"><span>ОТМ Групп, торгово-производственная компания, Иркутск. 2013 по 2026</span><span>Прототип. Цены «от» и число моделей в фильтрах условные</span></div>
+    <div class="bottom"><span>ОТМ Групп, торгово-производственная компания, Иркутск. 2013 по 2026</span><span>Прототип. Цены «от» и число моделей в фильтрах условные. <a href="../rationale.html" style="display:inline;padding:0;color:#fff;text-decoration:underline">Почему эти блоки: обоснование</a></span></div>
   </div>
 </footer>
 
@@ -299,6 +330,6 @@
   </form>
 </div>
 
-<script src="../assets/app.js?v=3"></script>
+<script src="../assets/app.js?v=4"></script>
 </body>
 </html>
